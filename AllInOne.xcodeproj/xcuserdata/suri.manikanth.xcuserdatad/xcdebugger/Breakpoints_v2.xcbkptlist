@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "26E2109C-7E1F-41FE-AC97-D50B294DBEF3"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18C3D609-AC7A-46C4-A6E5-226675D2B782"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sampleFirebase/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "fetchButtonaction(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "18C3D609-AC7A-46C4-A6E5-226675D2B782 - 3d2ed457ce4a89ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sampleFirebase.ViewController.fetchButtonaction(Any) -&gt; ()"
+                  moduleName = "sampleFirebase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/sampleFirebase/sampleFirebase/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "18C3D609-AC7A-46C4-A6E5-226675D2B782 - f3e3679866f9d1c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, Swift.Error&gt;) -&gt; () in sampleFirebase.ViewController.fetchButtonaction(Any) -&gt; ()"
+                  moduleName = "sampleFirebase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/sampleFirebase/sampleFirebase/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "18C3D609-AC7A-46C4-A6E5-226675D2B782 - f3e3679866f9d1e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, Swift.Error&gt;) -&gt; () in sampleFirebase.ViewController.fetchButtonaction(Any) -&gt; ()"
+                  moduleName = "sampleFirebase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/sampleFirebase/sampleFirebase/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "18C3D609-AC7A-46C4-A6E5-226675D2B782 - f3e3679866f9d1e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Swift.String&gt;&gt;, Swift.Error&gt;) -&gt; () in sampleFirebase.ViewController.fetchButtonaction(Any) -&gt; ()"
+                  moduleName = "sampleFirebase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/sampleFirebase/sampleFirebase/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3AA51536-9ABA-42CD-BFEF-6CB418CEFBAF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sampleFirebase/manager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "deleteExpenseRecord(record:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3AA51536-9ABA-42CD-BFEF-6CB418CEFBAF - 3486a8639125208"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in sampleFirebase.DatabaseManager.deleteExpenseRecord(record: sampleFirebase.RecordModel) -&gt; ()"
+                  moduleName = "sampleFirebase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/sampleFirebase/sampleFirebase/manager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "324">
+               </Location>
+               <Location
+                  uuid = "3AA51536-9ABA-42CD-BFEF-6CB418CEFBAF - e9cbb1ce42120574"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sampleFirebase.DatabaseManager.deleteExpenseRecord(record: sampleFirebase.RecordModel, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "sampleFirebase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/sampleFirebase/sampleFirebase/manager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "3AA51536-9ABA-42CD-BFEF-6CB418CEFBAF - e9cbb1ce4212046c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sampleFirebase.DatabaseManager.deleteExpenseRecord(record: sampleFirebase.RecordModel, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "sampleFirebase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/sampleFirebase/sampleFirebase/manager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2364C625-6B41-4883-9A27-A4D1337E1DB1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sampleFirebase/manager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "deleteExpenseRecord(record:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2364C625-6B41-4883-9A27-A4D1337E1DB1 - 3486a86391252f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in sampleFirebase.DatabaseManager.deleteExpenseRecord(record: sampleFirebase.RecordModel) -&gt; ()"
+                  moduleName = "sampleFirebase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/sampleFirebase/sampleFirebase/manager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  uuid = "2364C625-6B41-4883-9A27-A4D1337E1DB1 - a830e4f6f20481d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in sampleFirebase.DatabaseManager.deleteExpenseRecord(record: sampleFirebase.RecordModel, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "sampleFirebase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/sampleFirebase/sampleFirebase/manager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "2364C625-6B41-4883-9A27-A4D1337E1DB1 - a830e4f6f204915"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in sampleFirebase.DatabaseManager.deleteExpenseRecord(record: sampleFirebase.RecordModel, completion: (Swift.Result&lt;Swift.Bool, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "sampleFirebase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/sampleFirebase/sampleFirebase/manager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "97"
+                  endingLineNumber = "97"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "309B48F1-FF1E-4DC8-9542-B746D5526C66"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sampleFirebase/RecordVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "309B48F1-FF1E-4DC8-9542-B746D5526C66 - 2e7da04d666ee3a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sampleFirebase.RecordVC.viewDidLoad() -&gt; ()"
+                  moduleName = "sampleFirebase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/sampleFirebase/sampleFirebase/RecordVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "309B48F1-FF1E-4DC8-9542-B746D5526C66 - 2e7da04d666ee3a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sampleFirebase.RecordVC.viewDidLoad() -&gt; ()"
+                  moduleName = "sampleFirebase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/sampleFirebase/sampleFirebase/RecordVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB40B3B1-5A7B-48B3-A916-81E3AEA690B4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sampleFirebase/File.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DD87376E-9351-4D00-8E5A-3F5D5A7E57F1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sampleFirebase/File.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "showActivityIndicator()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A45066E-F5B2-433E-9176-1E4EF1E05D38"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sampleFirebase/File.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0597A7B2-D607-4AF3-A37F-741B0FB8F2E5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sampleFirebase/File.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
