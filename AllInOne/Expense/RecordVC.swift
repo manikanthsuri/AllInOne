@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class RecordVC: UIViewController {
 
@@ -19,8 +20,9 @@ class RecordVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myViewController = MyViewController()
-        present(myViewController, animated: true, completion: nil)
+        
+//        let vc = UIHostingController(rootView: myView())
+//        present(vc, animated: true, completion: nil)
         
         // Do any additional setup after loading the view.
     }

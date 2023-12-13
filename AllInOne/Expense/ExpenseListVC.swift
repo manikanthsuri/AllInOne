@@ -89,6 +89,8 @@ extension ExpenseListVC: UITableViewDataSource {
         }
         if record.sent {
             cell.paidImgView.isHidden = false
+        } else {
+            cell.paidImgView.isHidden = true
         }
         
         return cell

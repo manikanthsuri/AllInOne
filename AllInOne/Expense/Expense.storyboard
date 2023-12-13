@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v6M-mm-uUz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
@@ -12,16 +12,16 @@
         <!--Expense ListVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ExpenseListVC" id="BYZ-38-t0r" customClass="ExpenseListVC" customModule="sampleFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExpenseListVC" id="BYZ-38-t0r" customClass="ExpenseListVC" customModule="AllInOne_SwiftUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amf-aW-4s7" userLabel="HeaderView">
-                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="0.0"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expenses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJp-l5-SjD">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="0.0"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <color key="textColor" systemColor="systemPurpleColor"/>
                                         <nil key="highlightedColor"/>
@@ -41,11 +41,10 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="vJp-l5-SjD" secondAttribute="trailing" id="2uh-f9-yVg"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="3v8-YA-Fij"/>
-                                    <constraint firstAttribute="height" constant="50" id="F8C-sw-PNg"/>
+                                    <constraint firstAttribute="height" id="F8C-sw-PNg"/>
                                     <constraint firstAttribute="bottom" secondItem="zMH-qj-IPk" secondAttribute="bottom" constant="5" id="PZt-Q9-rQu"/>
                                     <constraint firstAttribute="trailing" secondItem="zMH-qj-IPk" secondAttribute="trailing" constant="10" id="Q7T-bC-MKe"/>
                                     <constraint firstAttribute="bottom" secondItem="vJp-l5-SjD" secondAttribute="bottom" id="SZv-kZ-Czv"/>
@@ -55,7 +54,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4gg-m2-896">
-                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="5Wt-ID-Owq"/>
@@ -86,7 +85,7 @@
         <!--AddRecordVC-->
         <scene sceneID="uuc-bh-B5v">
             <objects>
-                <viewController storyboardIdentifier="AddRecordVC" modalPresentationStyle="fullScreen" id="nTO-DU-e8B" userLabel="AddRecordVC" customClass="AddRecordVC" customModule="sampleFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddRecordVC" modalPresentationStyle="fullScreen" id="nTO-DU-e8B" userLabel="AddRecordVC" customClass="AddRecordVC" customModule="AllInOne_SwiftUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tom-9C-U9i">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +97,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                        <color key="textColor" systemColor="systemPurpleColor"/>
+                                        <color key="textColor" red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYh-zq-fL9">
@@ -188,7 +187,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nc-Ld-3zE">
                                                         <rect key="frame" x="10" y="35" width="373" height="35"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter &quot;From&quot; account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xrg-z3-5OM" customClass="DropDown" customModule="sampleFirebase" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter &quot;From&quot; account" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xrg-z3-5OM" customClass="DropDown" customModule="AllInOne_SwiftUI" customModuleProvider="target">
                                                                 <rect key="frame" x="5" y="0.0" width="368" height="35"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -323,17 +322,17 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cL5-EQ-BfA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="373" height="35"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FZX-Oh-tev" customClass="DropDown" customModule="sampleFirebase" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FZX-Oh-tev" customClass="DropDown" customModule="AllInOne_SwiftUI" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="121" height="35"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Month" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KXy-Oz-iMe" customClass="DropDown" customModule="sampleFirebase" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Month" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KXy-Oz-iMe" customClass="DropDown" customModule="AllInOne_SwiftUI" customModuleProvider="target">
                                                                         <rect key="frame" x="126" y="0.0" width="121" height="35"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Year" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BR0-CU-4P4" customClass="DropDown" customModule="sampleFirebase" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Year" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BR0-CU-4P4" customClass="DropDown" customModule="AllInOne_SwiftUI" customModuleProvider="target">
                                                                         <rect key="frame" x="252" y="0.0" width="121" height="35"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -377,7 +376,7 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MKH-Vv-SB2">
                                                         <rect key="frame" x="10" y="35" width="373" height="35"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select True or False" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kBi-kr-J4p" customClass="DropDown" customModule="sampleFirebase" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select True or False" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kBi-kr-J4p" customClass="DropDown" customModule="AllInOne_SwiftUI" customModuleProvider="target">
                                                                 <rect key="frame" x="5" y="0.0" width="368" height="35"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -480,12 +479,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsu-7W-Dxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850" y="5"/>
+            <point key="canvasLocation" x="908" y="5"/>
         </scene>
         <!--RecordVC-->
         <scene sceneID="OAD-VZ-gJX">
             <objects>
-                <viewController id="v6M-mm-uUz" userLabel="RecordVC" customClass="RecordVC" customModule="sampleFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="v6M-mm-uUz" userLabel="RecordVC" customClass="RecordVC" customModule="AllInOne_SwiftUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q37-SO-2Bk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
