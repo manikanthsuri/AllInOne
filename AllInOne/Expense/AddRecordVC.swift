@@ -20,12 +20,14 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var fromAccountView: UIView!
     @IBOutlet weak var fromAccountLabel: UILabel!
     @IBOutlet weak var fromAccountTFView: UIView!
-    @IBOutlet weak var fromAccountTF: DropDown!
+    @IBOutlet weak var fromAccountTF: UITextField!
+    @IBOutlet weak var fromAccountBtn: UIButton!
     
     @IBOutlet weak var toAccountView: UIView!
     @IBOutlet weak var toAccountLabel: UILabel!
     @IBOutlet weak var toAccountTFView: UIView!
     @IBOutlet weak var toAccountTF: UITextField!
+    @IBOutlet weak var toAccountBtn: UIButton!
     
     @IBOutlet weak var forView: UIView!
     @IBOutlet weak var forLabel: UILabel!
@@ -35,14 +37,18 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dateView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var dateTFView: UIView!
-    @IBOutlet weak var dateTF: DropDown!
-    @IBOutlet weak var monthTF: DropDown!
-    @IBOutlet weak var yearTF: DropDown!
+    @IBOutlet weak var dateTF: UITextField!
+    @IBOutlet weak var dateBtn: UIButton!
+    @IBOutlet weak var monthTF: UITextField!
+    @IBOutlet weak var monthBtn: UIButton!
+    @IBOutlet weak var yearTF: UITextField!
+    @IBOutlet weak var yearBtn: UIButton!
     
     @IBOutlet weak var sentView: UIView!
     @IBOutlet weak var sentLabel: UILabel!
     @IBOutlet weak var sentTFView: UIView!
-    @IBOutlet weak var sentTF: DropDown!
+    @IBOutlet weak var sentTF: UITextField!
+    @IBOutlet weak var sentBtn: UIButton!
     
     @IBOutlet weak var submitBtn: UIButton!
     
@@ -69,11 +75,6 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
                                         yearTF,
                                         forTFView])
         
-        UIHelper.setDropDownTextField(to: sentTF, options: bools)
-        UIHelper.setDropDownTextField(to: dateTF, options: dates)
-        UIHelper.setDropDownTextField(to: monthTF, options: months)
-        UIHelper.setDropDownTextField(to: yearTF, options: years)
-        UIHelper.setDropDownTextField(to: fromAccountTF, options: fromAccounts)
         if isfromEdit {
             setValues()
             titleLbl.text = "Update Expense"
@@ -82,6 +83,97 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
         }
         
     }
+    @IBAction func fromAccountBtnAction(_ sender: Any) {
+        let params = Parameters(
+            message: "Select from which account you want transfer",
+            cancelButton: "Cancel",
+            otherButtons: fromAccounts
+        )
+        AlertHelperKit().showAlertWithHandler(self, parameters: params) { buttonIndex in
+            switch buttonIndex {
+            case 0:
+                return
+            default:
+                self.fromAccountTF.text = fromAccounts[buttonIndex - 1]
+            }
+        }
+    }
+    @IBAction func toAccountBtnAction(_ sender: Any) {
+        let params = Parameters(
+            message: "Select to which account you want transfer",
+            cancelButton: "Cancel",
+            otherButtons: toAccounts
+        )
+        AlertHelperKit().showAlertWithHandler(self, parameters: params) { buttonIndex in
+            switch buttonIndex {
+            case 0:
+                return
+            default:
+                self.toAccountTF.text = toAccounts[buttonIndex - 1]
+            }
+        }
+    }
+    @IBAction func dateBtnAction(_ sender: Any) {
+        let params = Parameters(
+            message: "Select Date",
+            cancelButton: "Cancel",
+            otherButtons: dates
+        )
+        AlertHelperKit().showAlertWithHandler(self, parameters: params) { buttonIndex in
+            switch buttonIndex {
+            case 0:
+                return
+            default:
+                self.dateTF.text = dates[buttonIndex - 1]
+            }
+        }
+    }
+    @IBAction func monthBtnAction(_ sender: Any) {
+        let params = Parameters(
+            message: "Select Month",
+            cancelButton: "Cancel",
+            otherButtons: months
+        )
+        AlertHelperKit().showAlertWithHandler(self, parameters: params) { buttonIndex in
+            switch buttonIndex {
+            case 0:
+                return
+            default:
+                self.monthTF.text = months[buttonIndex - 1]
+            }
+        }
+    }
+    @IBAction func yearBtnAction(_ sender: Any) {
+        let params = Parameters(
+            message: "Select Year",
+            cancelButton: "Cancel",
+            otherButtons: years
+        )
+        AlertHelperKit().showAlertWithHandler(self, parameters: params) { buttonIndex in
+            switch buttonIndex {
+            case 0:
+                return
+            default:
+                self.yearTF.text = years[buttonIndex - 1]
+            }
+        }
+    }
+    @IBAction func sentBtnAction(_ sender: Any) {
+        let params = Parameters(
+            message: "Is amount sent already?",
+            cancelButton: "Cancel",
+            otherButtons: bools
+        )
+        AlertHelperKit().showAlertWithHandler(self, parameters: params) { buttonIndex in
+            switch buttonIndex {
+            case 0:
+                return
+            default:
+                self.sentTF.text = bools[buttonIndex - 1]
+            }
+        }
+    }
+
     func setValues(){
         
         guard let record = selectedRecord else {
@@ -135,15 +227,27 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
             date: date,
             month: month,
             year: year,
-            sent: Bool(sent.lowercased()) ?? false)
+            sent: Bool(sent.lowercased()) ?? false,
+            uniqueId: selectedRecord?.uniqueId)
+        
         if isfromEdit {
             FireBaseManager.shared.updateExpenseRecord(
                 record: record){ result in
                     switch result {
                     case .success(_):
-                        print("mk")
+                        let params = Parameters(
+                            title: "Message",
+                            message: "Expense updated successfully",
+                            otherButtons: ["Ok"]
+                        )
+                        AlertHelperKit().showAlertWithHandler(self, parameters: params) { buttonIndex in
+                            switch buttonIndex {
+                            default:
+                                self.dismiss(animated: true)
+                            }
+                        }
                     case .failure(let error):
-                        print("Failure: \(error)")
+                        AlertHelperKit().showAlert(self, title: "Expense update failed", message: "\(error)", button: "Ok")
                     }
                 }
         } else {
@@ -151,10 +255,22 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
                 record: record){ result in
                     switch result {
                     case .success (_):
-                        print("mk")
-                        self.resetTextFields()
+                        let params = Parameters(
+                            title: "",
+                            message: "Do you want add one more Expense",
+                            cancelButton: "No",
+                            otherButtons: ["Yes"]
+                        )
+                        AlertHelperKit().showAlertWithHandler(self, parameters: params) { buttonIndex in
+                            switch buttonIndex {
+                            case 0:
+                                self.dismiss(animated: true)
+                            default:
+                                self.resetTextFields()
+                            }
+                        }
                     case .failure(let error):
-                        print("Failure: \(error)")
+                        AlertHelperKit().showAlert(self, title: "Something went wrong", message: "\(error)", button: "Ok")
                     }
                 }
         }
@@ -196,6 +312,3 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
         // Perform actions when the text field becomes inactive
     }
 }
-
-
-//if let trueBool = Bool("True") { print("Converted to Bool:", trueBool)} else { print("Conversion to Bool failed")}

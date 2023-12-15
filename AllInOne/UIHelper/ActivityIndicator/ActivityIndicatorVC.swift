@@ -30,47 +30,27 @@ struct ActivityIndicatorView: View {
     @ObservedObject private var activityIndicatorManager = ActivityIndicatorManager.shared
 
     var body: some View {
-        if activityIndicatorManager.isLoading {
-            ProgressView("Loading...")
-                .progressViewStyle(CircularProgressViewStyle())
-                .frame(width: 120, height: 120)
-                .background(Color.black.opacity(0.5))
-                .foregroundColor(.white)
-                .cornerRadius(15)
-        }
-    }
-}
-
-
-struct ContentView: View {
-    @ObservedObject private var activityIndicatorManager = ActivityIndicatorManager.shared
-
-    var body: some View {
-        ZStack {
-            VStack {
-                Text("Your Content Goes Here")
-
-                Button("Show Activity Indicator") {
-                    activityIndicatorManager.showActivityIndicator()
-                }
-            }
-
+        
+        VStack(spacing: 24) {
             if activityIndicatorManager.isLoading {
-                ActivityIndicatorView()
-                    .background(Color.black.opacity(0.5)) // Background to cover the entire view
+                iActivityIndicator(style: .rotatingShapes(size:15))
             }
         }
+        .frame(width: 200, height: 200)
+        .padding()
+        .foregroundColor(.mint)
     }
 }
-class MyViewController: UIViewController {
+
+class ActivityIndicatorVC: UIViewController {
     
-    private var hostingController: UIHostingController<ContentView>!
+    private var hostingController: UIHostingController<ActivityIndicatorView>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Create an instance of UIHostingController with ContentView
-        hostingController = UIHostingController(rootView: ContentView())
+        hostingController = UIHostingController(rootView: ActivityIndicatorView())
 
         // Add the SwiftUI view as a child view controller
         addChild(hostingController)

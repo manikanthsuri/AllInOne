@@ -30,9 +30,4 @@ class UIHelper {
         }
     }
     
-    static func setDropDownTextField(to textField: DropDown, options: [String]) {
-        textField.isSearchEnable = false
-        textField.optionArray = options
-        textField.checkMarkEnabled = false
-    }
 }

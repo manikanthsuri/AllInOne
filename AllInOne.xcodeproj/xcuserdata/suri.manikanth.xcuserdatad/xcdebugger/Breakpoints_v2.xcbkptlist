@@ -7,33 +7,81 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "059455D4-4663-42EF-BD90-E38FDEA49712"
-            shouldBeEnabled = "Yes"
+            uuid = "0CCB8561-EFD9-4B8F-9F91-6A845FE22568"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AllInOne-SwiftUI/myViewController.swift"
+            filePath = "AllInOne/FireBase/DataHelper+Hex.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "ExpenseListVCWrapper"
-            landmarkType = "14">
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "stringToHex(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "07E71DFC-F210-47AA-BDDF-FFC95BEFBBF9"
+            uuid = "06ED89B5-BAA3-4C84-892B-D86A01B4C0C2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllInOne/FireBase/FireBaseManager+Salary.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "insertSalaryRecord(record:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "02E3BFFE-B6B0-449E-B98D-3FA6623743BA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AllInOne-SwiftUI/Expense/ExpenseListVC.swift"
+            filePath = "AllInOne/FireBase/FireBaseManager+Expenses.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "getExpensesList(completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "02E3BFFE-B6B0-449E-B98D-3FA6623743BA - 2303a6ce0deb0107"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AllInOne.FireBaseManager.getExpensesList(completion: (Swift.Result&lt;Swift.Dictionary&lt;Swift.String, Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AllInOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/Sample/AllInOne/AllInOne/FireBase/FireBaseManager+Expenses.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "02E3BFFE-B6B0-449E-B98D-3FA6623743BA - b4e4f0561e143877"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot, Swift.Optional&lt;Swift.String&gt;) -&gt; () in AllInOne.FireBaseManager.getExpensesList(completion: (Swift.Result&lt;Swift.Dictionary&lt;Swift.String, Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AllInOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/Sample/AllInOne/AllInOne/FireBase/FireBaseManager+Expenses.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
