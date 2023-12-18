@@ -1,13 +1,11 @@
 //
-//  HomeView.swift
+//  ExpensesView.swift
 //  SideMenuSwiftUI
-//
-//  Created by Zeeshan Suleman on 04/03/2023.
 //
 
 import SwiftUI
 
-struct HomeView: View {
+struct ExpensesView: View {
     
     @Binding var presentSideMenu: Bool
     @State private var isSheetPresented = false
@@ -48,6 +46,9 @@ struct HomeView: View {
         .background(Color(UIColor(hex: "00C7BE")))
     }
 }
+
+
+
 extension UIColor {
     convenience init(hex: String) {
         var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)

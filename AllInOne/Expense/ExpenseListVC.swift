@@ -121,11 +121,16 @@ class ExpenseListVC: UIViewController {
     }
     
 }
-extension ExpenseListVC: UITableViewDelegate {
+extension ExpenseListVC: UITableViewDelegate, dataAddUpdateProtocol {
+   
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 135
     }
     
+    func dataAdded() {
+        self.getExpenseList()
+    }
+
 }
 
 extension ExpenseListVC: UITableViewDataSource {
@@ -200,6 +205,7 @@ extension ExpenseListVC: UITableViewDataSource {
     func editRecord(record: RecordModel) {
         if let addRecordVC = storyboard!.instantiateViewController(withIdentifier: "AddRecordVC") as? AddRecordVC {
             addRecordVC.isfromEdit = true
+            addRecordVC.addUpdateDelegate = self
             addRecordVC.selectedRecord = record
             self.present(addRecordVC, animated: true, completion: nil)
         }
@@ -209,51 +215,24 @@ extension ExpenseListVC {
     
     func getImagesForTransaction(record: RecordModel) -> [UIImage] {
         var images = [UIImage]()
-        guard let fromImg = getToAccountImage(account: record.fromAccount.lowercased()) else {
+        guard let fromImg = getAccountImage(account: record.fromAccount.lowercased()) else {
             return []
         }
         images.append(fromImg)
         images.append(UIImage(named: "ic_arrow")!)
-        guard let toImage = getToAccountImage(account: record.toAccount.lowercased()) else {
+        guard let toImage = getAccountImage(account: record.toAccount.lowercased()) else {
             return []
         }
         images.append(toImage)
         return images
     }
     
-    func getToAccountImage(account:String) -> UIImage? {
-        var  image: UIImage?
-       
-        if account.contains("hdfc") {
-            image = UIImage(named: "hdfc")!
-        } else if account.contains("icici") {
-            image = UIImage(named: "icici")!
-        } else if account.contains("sbi") {
-            image = UIImage(named: "sbi")!
-        } else if account.contains("union") {
-            image = UIImage(named: "unionbank")!
-        } else if account.contains("father") {
-            image = UIImage(named: "father")!
-        } else if account.contains("rent") {
-            image = UIImage(named: "rent")!
-        } else if account.contains("shannu rd") {
-            image = UIImage(named: "srd")!
-        } else if account.contains("vegitables") {
-            image = UIImage(named: "vegitables")!
-        } else if account.contains("milk") {
-            image = UIImage(named: "milk")!
-        } else if account.contains("post office") {
-            image = UIImage(named: "postoffice")!
-        } else if account.contains("ppf") {
-            image = UIImage(named: "ppf")!
-        } else if account.contains("bajaj") {
-            image = UIImage(named: "bajaj")!
-        } else if account.contains("hdfc credit card") {
-            image = UIImage(named: "hdfccredit")!
-        } else if account.contains("icici credit card") {
-            image = UIImage(named: "icicicredit")!
-        } else if account.contains("shop") {
-            image = UIImage(named: "shop")!
+    func getAccountImage(account:String) -> UIImage? {
+        
+        var accountType = account
+        accountType = accountType.replacingOccurrences(of: " ", with: "_")
+        guard let image = UIImage(named: accountType) else {
+            return nil
         }
         return image
     }

@@ -10,4 +10,5 @@ import Foundation
 var mainTable = "Suri"
 var expensesTable = "Expenses"
 var salaryTable = "SalaryDetails"
+var monthTable = DataHelper.getMonthYearString()
 

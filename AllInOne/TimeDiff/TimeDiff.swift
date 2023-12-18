@@ -7,32 +7,27 @@
 
 import SwiftUI
 
-struct FavoriteView: View {
+struct TimeDiff: View {
     
     @Binding var presentSideMenu: Bool
-    @State private var isPresentingHome = false
-
     
     var body: some View {
         VStack{
             HStack{
                 Button{
                     presentSideMenu.toggle()
-                    isPresentingHome.toggle()
                 } label: {
                     Image("menu")
                         .resizable()
                         .frame(width: 32, height: 32)
                 }
                 Spacer()
-                Text("sfsdf")
-                    .background(.red)
-                    .frame(height: 32)
-                Spacer()
-            }.foregroundColor(.purple)
+            }.foregroundColor(.pink)
+            
             Spacer()
-            ExpenseListVCWrapper()
+            Text("Time Diff")
             Spacer()
         }
+        .padding(.horizontal, 24)
     }
 }

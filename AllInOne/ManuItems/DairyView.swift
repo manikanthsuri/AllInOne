@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct DairyView: View {
     
     @Binding var presentSideMenu: Bool
     
@@ -22,10 +22,10 @@ struct ProfileView: View {
                         .frame(width: 32, height: 32)
                 }
                 Spacer()
-            }
+            }.foregroundColor(.pink)
             
             Spacer()
-            Text("Profile View")
+            Text("Dairy View")
             Spacer()
         }
         .padding(.horizontal, 24)

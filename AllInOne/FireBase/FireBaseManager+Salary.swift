@@ -31,21 +31,21 @@ extension FireBaseManager {
         
     public func getSalaryDetailsList(completion: @escaping (Result<Bool, Error>) -> Void) {
         
-
         tableRef.child(salaryTable).observeSingleEvent(of: .value) { (snapshot, error) in
             
             if let error = error {
                 completion(.failure(error as! Error))
             } else {
-                let month = DataHelper.getCurrentMonthString()
-                let year = DataHelper.getCurrentYearString()
-                let uniqueKey = "\(month)-\(year)"
+               
+                let uniqueKey = DataHelper.getMonthYearString()
                 if let data = snapshot.value as? [String: Any] {
                     guard (data[uniqueKey] != nil) else {
                         completion(.failure(DataError.notFoundError))
                         return
                     }
                     completion(.success(true))
+                } else {
+                    completion(.failure(DataError.notFoundError))
                 }
             }
         }

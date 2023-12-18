@@ -14,9 +14,8 @@ let months = [
     "September", "October", "November", "December"
 ]
 let dates = (1...31).map { String($0) }
-
-let years = ["2023","2024","2025"]
+let years = ["2023","2024","2025","2026"]
 let bools = ["True","False"]
-let fromAccounts = ["HDFC","ICICI","SBI","UNION","BAJAJ FINSERV"]
-let toAccounts = ["HDFC","ICICI","SBI","UNION","FATHER","RENT","SHANNU RD","VEGITABLES","STORE","POST OFFICE","PPF","BAJAJ FINSERV","HDFC CREDIT CARD","ICICI CREDIT CARD"]
+let fromAccounts = ["BAJAJ FINSERV", "HDFC BANK", "HDFC CREDIT CARD", "ICICI BANK", "ICICI CREDIT CARD", "SBI", "UNION BANK"]
+let toAccounts = ["BAJAJ FINSERV", "DMART", "FATHER", "FUEL", "HDFC BANK", "HDFC CREDIT CARD", "ICICI", "ICICI CREDIT CARD", "JIO MART", "PPF", "POST OFFICE", "RENT", "SHANNU RD", "SBI", "STORE", "UNION BANK", "VEGITABLES"]
 

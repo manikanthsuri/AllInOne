@@ -9,20 +9,26 @@ import SwiftUI
 
 enum SideMenuRowType: Int, CaseIterable{
     case home = 0
-    case favorite
-    case chat
-    case profile
+    case expenses
+    case dairy
+    case ageDiff
+    case timeDiff
+    case reminder
     
     var title: String{
         switch self {
         case .home:
             return "Home"
-        case .favorite:
-            return "Favorite"
-        case .chat:
-            return "Chat"
-        case .profile:
-            return "Profile"
+        case .expenses:
+            return "Expenses"
+        case .dairy:
+            return "Record Dairy"
+        case .ageDiff:
+            return "Time Convert"
+        case .timeDiff:
+            return "Time Difference"
+        case .reminder:
+            return "Remind Me"
         }
     }
     
@@ -30,12 +36,8 @@ enum SideMenuRowType: Int, CaseIterable{
         switch self {
         case .home:
             return "home"
-        case .favorite:
+        default:
             return "favorite"
-        case .chat:
-            return "chat"
-        case .profile:
-            return "profile"
         }
     }
 }

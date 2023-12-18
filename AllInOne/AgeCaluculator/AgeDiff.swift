@@ -1,5 +1,5 @@
 //
-//  ChatView.swift
+//  FavoriteView.swift
 //  SideMenuSwiftUI
 //
 //  Created by Zeeshan Suleman on 04/03/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ChatView: View {
+struct AgeDiff: View {
     
     @Binding var presentSideMenu: Bool
     
@@ -25,7 +25,7 @@ struct ChatView: View {
             }.foregroundColor(.pink)
             
             Spacer()
-            Text("Chat View")
+            Text("Age Diff")
             Spacer()
         }
         .padding(.horizontal, 24)

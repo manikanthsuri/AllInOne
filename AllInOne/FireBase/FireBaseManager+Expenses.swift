@@ -30,7 +30,7 @@ extension FireBaseManager {
         let hexString = stringToHex(recordDictJson)
         let record = ["data": hexString] as [String : Any]
         
-        tableRef.child(expensesTable).child(uniqueId).setValue(record) { (error, ref) in
+        tableRef.child(expensesTable).child(monthTable).child(uniqueId).setValue(record) { (error, ref) in
             if let error = error {
                 completion(.failure(error))
             } else {
@@ -61,7 +61,7 @@ extension FireBaseManager {
         let hexString = stringToHex(recordDictJson)
         let record = ["data": hexString] as [String : Any]
         
-        tableRef.child(expensesTable).child(uniqueId).updateChildValues(record) { (error, _) in
+        tableRef.child(expensesTable).child(monthTable).child(uniqueId).updateChildValues(record) { (error, _) in
             if let error = error {
                 completion(.failure(error))
             } else {
@@ -73,7 +73,7 @@ extension FireBaseManager {
     public func deleteExpenseRecord(record: RecordModel,completion: @escaping (Result<Bool, Error>) -> Void) {
         let uniqueId = record.uniqueId ?? ""
   
-        tableRef.child(expensesTable).child(uniqueId).removeValue { (error, _) in
+        tableRef.child(expensesTable).child(monthTable).child(uniqueId).removeValue { (error, _) in
             if let error = error {
                 completion(.failure(error))
             } else {
@@ -84,7 +84,7 @@ extension FireBaseManager {
     
     public func getExpensesList(completion: @escaping (Result<[String: [String:Any]], Error>) -> Void) {
         
-        tableRef.child(expensesTable).observeSingleEvent(of: .value) { (snapshot, error) in
+        tableRef.child(expensesTable).child(monthTable).observeSingleEvent(of: .value) { (snapshot, error) in
             if let error = error {
                 completion(.failure(error as! Error))
             } else if let data = snapshot.value as? [String: Any] {

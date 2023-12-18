@@ -38,6 +38,7 @@ final class DataHelper {
         
         return monthName
     }
+    
    static func getCurrentYearString() -> String {
         let currentDate = Date()
 
@@ -53,6 +54,12 @@ final class DataHelper {
         let upperBound = 99999999
         let randomValue = Int(arc4random_uniform(UInt32(upperBound - lowerBound + 1))) + lowerBound
         return String(randomValue)
+    }
+    
+    static func getMonthYearString() -> String {
+        let month = getCurrentMonthString()
+        let year = getCurrentYearString()
+        return "\(month)-\(year)"
     }
     
 }
