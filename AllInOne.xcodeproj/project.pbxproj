@@ -80,6 +80,34 @@
 		F18EAB6F2B2D85A20017E83E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18EAB6E2B2D85A20017E83E /* Protocols.swift */; };
 		F18EAB722B2DB5D50017E83E /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18EAB702B2DB5D40017E83E /* ReminderView.swift */; };
 		F18EAB732B2DB5D50017E83E /* AgeDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18EAB712B2DB5D50017E83E /* AgeDiff.swift */; };
+		F1A50D712B34AEEA00D5C43B /* ExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D702B34AEEA00D5C43B /* ExpensesViewModel.swift */; };
+		F1A50D942B34B0EA00D5C43B /* DYLineSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D752B34B0EA00D5C43B /* DYLineSettings.swift */; };
+		F1A50D952B34B0EA00D5C43B /* DYPieChartSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D762B34B0EA00D5C43B /* DYPieChartSettings.swift */; };
+		F1A50D962B34B0EA00D5C43B /* DYPlotAreaSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D772B34B0EA00D5C43B /* DYPlotAreaSettings.swift */; };
+		F1A50D972B34B0EA00D5C43B /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D782B34B0EA00D5C43B /* Shadow.swift */; };
+		F1A50D982B34B0EA00D5C43B /* AxisSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D792B34B0EA00D5C43B /* AxisSettings.swift */; };
+		F1A50D992B34B0EA00D5C43B /* DYPieFraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D7A2B34B0EA00D5C43B /* DYPieFraction.swift */; };
+		F1A50D9A2B34B0EA00D5C43B /* MarkerLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D7B2B34B0EA00D5C43B /* MarkerLine.swift */; };
+		F1A50D9B2B34B0EA00D5C43B /* DYBarDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D7C2B34B0EA00D5C43B /* DYBarDataSet.swift */; };
+		F1A50D9C2B34B0EA00D5C43B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D7E2B34B0EA00D5C43B /* String+Extensions.swift */; };
+		F1A50D9D2B34B0EA00D5C43B /* Path+QuadCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D7F2B34B0EA00D5C43B /* Path+QuadCurve.swift */; };
+		F1A50D9E2B34B0EA00D5C43B /* Shape+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D802B34B0EA00D5C43B /* Shape+Extensions.swift */; };
+		F1A50D9F2B34B0EA00D5C43B /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D812B34B0EA00D5C43B /* Color+Extensions.swift */; };
+		F1A50DA02B34B0EA00D5C43B /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D822B34B0EA00D5C43B /* Date+Extensions.swift */; };
+		F1A50DA12B34B0EA00D5C43B /* GeometryEffect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D832B34B0EA00D5C43B /* GeometryEffect+Extensions.swift */; };
+		F1A50DA22B34B0EA00D5C43B /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D842B34B0EA00D5C43B /* Double+Extensions.swift */; };
+		F1A50DA32B34B0EA00D5C43B /* DYDataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D852B34B0EA00D5C43B /* DYDataPoint.swift */; };
+		F1A50DA42B34B0EA00D5C43B /* OrientationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D862B34B0EA00D5C43B /* OrientationObserver.swift */; };
+		F1A50DA52B34B0EA00D5C43B /* AxisScaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D872B34B0EA00D5C43B /* AxisScaler.swift */; };
+		F1A50DA62B34B0EA00D5C43B /* DYFractionChartInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D8A2B34B0EA00D5C43B /* DYFractionChartInfoView.swift */; };
+		F1A50DA72B34B0EA00D5C43B /* DYPieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D8B2B34B0EA00D5C43B /* DYPieChartView.swift */; };
+		F1A50DA82B34B0EA00D5C43B /* DYFractionChartLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D8C2B34B0EA00D5C43B /* DYFractionChartLegendView.swift */; };
+		F1A50DA92B34B0EA00D5C43B /* PlotAreaChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D8E2B34B0EA00D5C43B /* PlotAreaChart.swift */; };
+		F1A50DAA2B34B0EA00D5C43B /* MultiSeriesLegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D8F2B34B0EA00D5C43B /* MultiSeriesLegendView.swift */; };
+		F1A50DAB2B34B0EA00D5C43B /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D902B34B0EA00D5C43B /* Line.swift */; };
+		F1A50DAC2B34B0EA00D5C43B /* MaxSizeOptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D912B34B0EA00D5C43B /* MaxSizeOptionalView.swift */; };
+		F1A50DAD2B34B0EA00D5C43B /* DYGridChartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D922B34B0EA00D5C43B /* DYGridChartHeaderView.swift */; };
+		F1A50DAE2B34B0EA00D5C43B /* MeasureViewSizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D932B34B0EA00D5C43B /* MeasureViewSizeModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +154,34 @@
 		F18EAB6E2B2D85A20017E83E /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		F18EAB702B2DB5D40017E83E /* ReminderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		F18EAB712B2DB5D50017E83E /* AgeDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeDiff.swift; sourceTree = "<group>"; };
+		F1A50D702B34AEEA00D5C43B /* ExpensesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewModel.swift; sourceTree = "<group>"; };
+		F1A50D752B34B0EA00D5C43B /* DYLineSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYLineSettings.swift; sourceTree = "<group>"; };
+		F1A50D762B34B0EA00D5C43B /* DYPieChartSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYPieChartSettings.swift; sourceTree = "<group>"; };
+		F1A50D772B34B0EA00D5C43B /* DYPlotAreaSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYPlotAreaSettings.swift; sourceTree = "<group>"; };
+		F1A50D782B34B0EA00D5C43B /* Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
+		F1A50D792B34B0EA00D5C43B /* AxisSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxisSettings.swift; sourceTree = "<group>"; };
+		F1A50D7A2B34B0EA00D5C43B /* DYPieFraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYPieFraction.swift; sourceTree = "<group>"; };
+		F1A50D7B2B34B0EA00D5C43B /* MarkerLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerLine.swift; sourceTree = "<group>"; };
+		F1A50D7C2B34B0EA00D5C43B /* DYBarDataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYBarDataSet.swift; sourceTree = "<group>"; };
+		F1A50D7E2B34B0EA00D5C43B /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		F1A50D7F2B34B0EA00D5C43B /* Path+QuadCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Path+QuadCurve.swift"; sourceTree = "<group>"; };
+		F1A50D802B34B0EA00D5C43B /* Shape+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Shape+Extensions.swift"; sourceTree = "<group>"; };
+		F1A50D812B34B0EA00D5C43B /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		F1A50D822B34B0EA00D5C43B /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		F1A50D832B34B0EA00D5C43B /* GeometryEffect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GeometryEffect+Extensions.swift"; sourceTree = "<group>"; };
+		F1A50D842B34B0EA00D5C43B /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		F1A50D852B34B0EA00D5C43B /* DYDataPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYDataPoint.swift; sourceTree = "<group>"; };
+		F1A50D862B34B0EA00D5C43B /* OrientationObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrientationObserver.swift; sourceTree = "<group>"; };
+		F1A50D872B34B0EA00D5C43B /* AxisScaler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AxisScaler.swift; sourceTree = "<group>"; };
+		F1A50D8A2B34B0EA00D5C43B /* DYFractionChartInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYFractionChartInfoView.swift; sourceTree = "<group>"; };
+		F1A50D8B2B34B0EA00D5C43B /* DYPieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYPieChartView.swift; sourceTree = "<group>"; };
+		F1A50D8C2B34B0EA00D5C43B /* DYFractionChartLegendView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYFractionChartLegendView.swift; sourceTree = "<group>"; };
+		F1A50D8E2B34B0EA00D5C43B /* PlotAreaChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlotAreaChart.swift; sourceTree = "<group>"; };
+		F1A50D8F2B34B0EA00D5C43B /* MultiSeriesLegendView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSeriesLegendView.swift; sourceTree = "<group>"; };
+		F1A50D902B34B0EA00D5C43B /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		F1A50D912B34B0EA00D5C43B /* MaxSizeOptionalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxSizeOptionalView.swift; sourceTree = "<group>"; };
+		F1A50D922B34B0EA00D5C43B /* DYGridChartHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYGridChartHeaderView.swift; sourceTree = "<group>"; };
+		F1A50D932B34B0EA00D5C43B /* MeasureViewSizeModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureViewSizeModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +302,7 @@
 		A146B6C52B271AF400A3650E /* AllInOne */ = {
 			isa = PBXGroup;
 			children = (
+				F1A50D722B34B0EA00D5C43B /* SwiftUIGraphs */,
 				A1EAC1ED2B28949000F7DC2F /* AppDelegate.swift */,
 				A146B6C62B271AF400A3650E /* AllInOne_SwiftUIApp.swift */,
 				F18EAB6E2B2D85A20017E83E /* Protocols.swift */,
@@ -300,6 +357,7 @@
 				A166B91F2B27E38B001D1CC6 /* RecordVC.swift */,
 				A1EAC1EB2B28915100F7DC2F /* Expense.storyboard */,
 				A166B9202B27E38B001D1CC6 /* ExpenseListVC.swift */,
+				F1A50D702B34AEEA00D5C43B /* ExpensesViewModel.swift */,
 				A1A68C032B29AB3C00C9EE2C /* ExpenseListVC+SalaryPopup.swift */,
 				A166B9212B27E38B001D1CC6 /* ExpenseCell.xib */,
 				A166B9222B27E38B001D1CC6 /* ExpenseCell.swift */,
@@ -348,6 +406,88 @@
 				A146B6DF2B271D5900A3650E /* ExpensesView.swift */,
 			);
 			path = Expenses;
+			sourceTree = "<group>";
+		};
+		F1A50D722B34B0EA00D5C43B /* SwiftUIGraphs */ = {
+			isa = PBXGroup;
+			children = (
+				F1A50D732B34B0EA00D5C43B /* Model */,
+				F1A50D882B34B0EA00D5C43B /* Views */,
+			);
+			path = SwiftUIGraphs;
+			sourceTree = "<group>";
+		};
+		F1A50D732B34B0EA00D5C43B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1A50D742B34B0EA00D5C43B /* Settings */,
+				F1A50D7A2B34B0EA00D5C43B /* DYPieFraction.swift */,
+				F1A50D7B2B34B0EA00D5C43B /* MarkerLine.swift */,
+				F1A50D7C2B34B0EA00D5C43B /* DYBarDataSet.swift */,
+				F1A50D7D2B34B0EA00D5C43B /* Extensions */,
+				F1A50D852B34B0EA00D5C43B /* DYDataPoint.swift */,
+				F1A50D862B34B0EA00D5C43B /* OrientationObserver.swift */,
+				F1A50D872B34B0EA00D5C43B /* AxisScaler.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1A50D742B34B0EA00D5C43B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F1A50D752B34B0EA00D5C43B /* DYLineSettings.swift */,
+				F1A50D762B34B0EA00D5C43B /* DYPieChartSettings.swift */,
+				F1A50D772B34B0EA00D5C43B /* DYPlotAreaSettings.swift */,
+				F1A50D782B34B0EA00D5C43B /* Shadow.swift */,
+				F1A50D792B34B0EA00D5C43B /* AxisSettings.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F1A50D7D2B34B0EA00D5C43B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F1A50D7E2B34B0EA00D5C43B /* String+Extensions.swift */,
+				F1A50D7F2B34B0EA00D5C43B /* Path+QuadCurve.swift */,
+				F1A50D802B34B0EA00D5C43B /* Shape+Extensions.swift */,
+				F1A50D812B34B0EA00D5C43B /* Color+Extensions.swift */,
+				F1A50D822B34B0EA00D5C43B /* Date+Extensions.swift */,
+				F1A50D832B34B0EA00D5C43B /* GeometryEffect+Extensions.swift */,
+				F1A50D842B34B0EA00D5C43B /* Double+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F1A50D882B34B0EA00D5C43B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1A50D892B34B0EA00D5C43B /* Pie Chart */,
+				F1A50D8D2B34B0EA00D5C43B /* Shared */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F1A50D892B34B0EA00D5C43B /* Pie Chart */ = {
+			isa = PBXGroup;
+			children = (
+				F1A50D8A2B34B0EA00D5C43B /* DYFractionChartInfoView.swift */,
+				F1A50D8B2B34B0EA00D5C43B /* DYPieChartView.swift */,
+				F1A50D8C2B34B0EA00D5C43B /* DYFractionChartLegendView.swift */,
+			);
+			path = "Pie Chart";
+			sourceTree = "<group>";
+		};
+		F1A50D8D2B34B0EA00D5C43B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F1A50D8E2B34B0EA00D5C43B /* PlotAreaChart.swift */,
+				F1A50D8F2B34B0EA00D5C43B /* MultiSeriesLegendView.swift */,
+				F1A50D902B34B0EA00D5C43B /* Line.swift */,
+				F1A50D912B34B0EA00D5C43B /* MaxSizeOptionalView.swift */,
+				F1A50D922B34B0EA00D5C43B /* DYGridChartHeaderView.swift */,
+				F1A50D932B34B0EA00D5C43B /* MeasureViewSizeModifier.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,37 +599,65 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1A50DA22B34B0EA00D5C43B /* Double+Extensions.swift in Sources */,
 				A146B6E12B271D5900A3650E /* TimeDiff.swift in Sources */,
 				A146B6EB2B2728D400A3650E /* ExpenseListVCWrapper.swift in Sources */,
+				F1A50DA12B34B0EA00D5C43B /* GeometryEffect+Extensions.swift in Sources */,
 				A146B6E82B271D6100A3650E /* SideMenuView.swift in Sources */,
 				F18EAB732B2DB5D50017E83E /* AgeDiff.swift in Sources */,
 				A166B9272B27E38B001D1CC6 /* ExpenseListVC.swift in Sources */,
+				F1A50D9F2B34B0EA00D5C43B /* Color+Extensions.swift in Sources */,
 				F18EAB722B2DB5D50017E83E /* ReminderView.swift in Sources */,
+				F1A50D982B34B0EA00D5C43B /* AxisSettings.swift in Sources */,
+				F1A50DA52B34B0EA00D5C43B /* AxisScaler.swift in Sources */,
+				F1A50DA02B34B0EA00D5C43B /* Date+Extensions.swift in Sources */,
+				F1A50D942B34B0EA00D5C43B /* DYLineSettings.swift in Sources */,
 				A166B93B2B27E3F3001D1CC6 /* FireBaseManager.swift in Sources */,
 				A1A68C0C2B29BBCA00C9EE2C /* DataHelper+Hex.swift in Sources */,
 				A166B92A2B27E38B001D1CC6 /* RecordModel.swift in Sources */,
+				F1A50D992B34B0EA00D5C43B /* DYPieFraction.swift in Sources */,
 				A166B9292B27E38B001D1CC6 /* ExpenseCell.swift in Sources */,
+				F1A50DA42B34B0EA00D5C43B /* OrientationObserver.swift in Sources */,
+				F1A50D9B2B34B0EA00D5C43B /* DYBarDataSet.swift in Sources */,
 				A166B9352B27E3E0001D1CC6 /* ActivityIndicatorVC.swift in Sources */,
+				F1A50DAB2B34B0EA00D5C43B /* Line.swift in Sources */,
+				F1A50D712B34AEEA00D5C43B /* ExpensesViewModel.swift in Sources */,
+				F1A50DA62B34B0EA00D5C43B /* DYFractionChartInfoView.swift in Sources */,
 				A1A68C0A2B29BB3400C9EE2C /* DataHelper.swift in Sources */,
 				A1EAC1EE2B28949000F7DC2F /* AppDelegate.swift in Sources */,
+				F1A50D9A2B34B0EA00D5C43B /* MarkerLine.swift in Sources */,
 				A1A68C102B29C75100C9EE2C /* SalayModel.swift in Sources */,
 				A1A68C042B29AB3C00C9EE2C /* ExpenseListVC+SalaryPopup.swift in Sources */,
+				F1A50D952B34B0EA00D5C43B /* DYPieChartSettings.swift in Sources */,
 				A1A68C062B29B67C00C9EE2C /* Constant.swift in Sources */,
+				F1A50DA32B34B0EA00D5C43B /* DYDataPoint.swift in Sources */,
+				F1A50DAE2B34B0EA00D5C43B /* MeasureViewSizeModifier.swift in Sources */,
 				A14430BA2B294E7100589270 /* iActivityIndicatorStyle.swift in Sources */,
+				F1A50D9E2B34B0EA00D5C43B /* Shape+Extensions.swift in Sources */,
+				F1A50DA82B34B0EA00D5C43B /* DYFractionChartLegendView.swift in Sources */,
 				A146B6E92B271D6100A3650E /* SideMenu.swift in Sources */,
 				A146B6E22B271D5900A3650E /* DairyView.swift in Sources */,
 				A14430BC2B294E7100589270 /* StyleModifier.swift in Sources */,
 				A166B9252B27E38B001D1CC6 /* Constants.swift in Sources */,
+				F1A50DAA2B34B0EA00D5C43B /* MultiSeriesLegendView.swift in Sources */,
 				A146B6E32B271D5900A3650E /* ExpensesView.swift in Sources */,
+				F1A50DAC2B34B0EA00D5C43B /* MaxSizeOptionalView.swift in Sources */,
+				F1A50D962B34B0EA00D5C43B /* DYPlotAreaSettings.swift in Sources */,
 				A14430C02B29564B00589270 /* Loadder.swift in Sources */,
 				A1EAC1EA2B288E4700F7DC2F /* SpeechRecognizer.swift in Sources */,
+				F1A50D9C2B34B0EA00D5C43B /* String+Extensions.swift in Sources */,
 				A146B6E42B271D5900A3650E /* HomeView.swift in Sources */,
+				F1A50DAD2B34B0EA00D5C43B /* DYGridChartHeaderView.swift in Sources */,
 				A166B9342B27E3E0001D1CC6 /* UIHelper.swift in Sources */,
 				A146B6C72B271AF400A3650E /* AllInOne_SwiftUIApp.swift in Sources */,
 				A166B92B2B27E38B001D1CC6 /* AddRecordVC.swift in Sources */,
 				A14430BE2B294E7100589270 /* iActivityIndicator.swift in Sources */,
+				F1A50DA92B34B0EA00D5C43B /* PlotAreaChart.swift in Sources */,
+				F1A50D972B34B0EA00D5C43B /* Shadow.swift in Sources */,
+				F1A50D9D2B34B0EA00D5C43B /* Path+QuadCurve.swift in Sources */,
 				A14430BB2B294E7100589270 /* RowOfShapes.swift in Sources */,
 				A1A68C082B29BAF700C9EE2C /* FireBaseManager+Expenses.swift in Sources */,
+				F1A50DA72B34B0EA00D5C43B /* DYPieChartView.swift in Sources */,
 				A146B6DB2B271CD800A3650E /* MainTabbedView.swift in Sources */,
 				F18EAB6F2B2D85A20017E83E /* Protocols.swift in Sources */,
 				A166B9262B27E38B001D1CC6 /* RecordVC.swift in Sources */,
