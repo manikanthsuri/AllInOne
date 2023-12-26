@@ -36,21 +36,7 @@ public struct DYPieFraction: Identifiable, Equatable,Hashable {
     
     /// example data: source https://www.statista.com/statistics/247407/average-annual-consumer-spending-in-the-us-by-type/
     /// - Returns: an array of DYChart Fractions.
-    public static func exampleData()->[DYPieFraction] {
-        
-        let housing = DYPieFraction(value: 20679, title: "1", detailFractions: [])
-        let transportation = DYPieFraction(value: 10742, title: "2", detailFractions: [])
-        let food = DYPieFraction(value:8169, title: "3", detailFractions: [])
-        let insurance = DYPieFraction(value: 7165,  title: "4", detailFractions: [])
-        let health = DYPieFraction(value: 5193, title: "5", detailFractions: [])
-        let entertainment = DYPieFraction(value: 3050, title: "6", detailFractions: [])
-        let cash = DYPieFraction(value: 1995, title: "7", detailFractions: [])
-        let other = DYPieFraction(value: 1891, title: "8", detailFractions: [])
-        let apparel = DYPieFraction(value: 1883, title: "9", detailFractions: [])
-        
-        
-        return [housing, transportation, food, insurance, health, entertainment, cash, other, apparel]
-    }
+   
     
 
 }

@@ -58,7 +58,7 @@ extension ExpenseListVC {
                     switch result {
                     case .success (_):
                         AlertHelperKit().showAlert(self, title: nil, message: "Added successfully", button: "Ok")
-                        self.getExpenseList()
+                        self.viewModel.getExpenseList()
                         self.salaryPopupView.removeFromSuperview()
                     case .failure(let error):
                         AlertHelperKit().showAlert(self, title: "Something went wrong", message: "\(error)", button: "Ok")
@@ -80,4 +80,8 @@ extension ExpenseListVC: UITextFieldDelegate {
             return true
         }
     }
+}
+
+extension Notification.Name {
+    static let dataNotification = Notification.Name("dataAdded")
 }

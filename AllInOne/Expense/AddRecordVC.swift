@@ -244,7 +244,7 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
                         AlertHelperKit().showAlertWithHandler(self, parameters: params) { buttonIndex in
                             switch buttonIndex {
                             default:
-                                self.addUpdateDelegate?.dataAdded()
+                                NotificationCenter.default.post(name: .dataNotification, object: nil)
                                 self.dismiss(animated: true)
                             }
                         }
@@ -266,7 +266,7 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
                         AlertHelperKit().showAlertWithHandler(self, parameters: params) { buttonIndex in
                             switch buttonIndex {
                             case 0:
-                                self.addUpdateDelegate?.dataAdded()
+                                NotificationCenter.default.post(name: .dataNotification, object: nil)
                                 self.dismiss(animated: true)
                             default:
                                 self.resetTextFields()

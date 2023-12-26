@@ -5,26 +5,41 @@
 //  Created by Suri Mani kanth on 21/12/23.
 //
 
+enum fetchDataType {
+    case salary
+    case expenses
+}
+
+protocol dataDelegate: AnyObject {
+    func dataDidUpdate(newData: [Any], ofType type: fetchDataType, error: Error?)
+}
+
 import Foundation
-import Combine
+
 
 class ExpensesViewModel {
     
-    @Published var expenses: [RecordModel] = []
-    private var cancellables: Set<AnyCancellable> = []
-    
-    init() {
-        getExpenseList()
+    weak var delegate: dataDelegate?
+
+
+    func getSalaryDetails() {
+        
+        FireBaseManager.shared.getSalaryDetailsList(completion: {[weak self] result in
+            switch result {
+            case .success(_):
+                self?.delegate?.dataDidUpdate(newData: [], ofType: .salary, error: nil)
+            case .failure(let error):
+                self?.delegate?.dataDidUpdate(newData: [], ofType: .salary, error: error)
+            }
+        })
     }
     
     func getExpenseList() {
-        self.$expenses
-            .sink{ _ in }
-            .store(in: &self.cancellables)
-        FireBaseManager.shared.getExpensesList(completion: { result in
+        
+        FireBaseManager.shared.getExpensesList(completion: { [weak self] result in
             switch result {
             case .success(let data):
-                self.expenses = data.values.compactMap { entry in
+                let expenses = data.values.compactMap { entry in
                     do {
                         if let hexString = entry["data"] as? String,
                            let dictString = FireBaseManager.shared.hexToString(hexString),
@@ -39,11 +54,10 @@ class ExpensesViewModel {
                         return nil
                     }
                 }
-                
-                
+                self?.delegate?.dataDidUpdate(newData: expenses, ofType: .expenses, error: nil)
             case .failure(let error):
-                Loadder.shared.hideLoader()
-
+                self?.delegate?.dataDidUpdate(newData: [], ofType: .expenses, error: error)
             }
         })
-    }}
+    }
+}

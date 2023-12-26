@@ -108,6 +108,9 @@
 		F1A50DAC2B34B0EA00D5C43B /* MaxSizeOptionalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D912B34B0EA00D5C43B /* MaxSizeOptionalView.swift */; };
 		F1A50DAD2B34B0EA00D5C43B /* DYGridChartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D922B34B0EA00D5C43B /* DYGridChartHeaderView.swift */; };
 		F1A50DAE2B34B0EA00D5C43B /* MeasureViewSizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D932B34B0EA00D5C43B /* MeasureViewSizeModifier.swift */; };
+		F1D41E832B3A5F8900E36952 /* ExpenseListVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D41E822B3A5F8800E36952 /* ExpenseListVC+TableViewDelegate.swift */; };
+		F1D41E852B3A5FC900E36952 /* ExpenseListVC+dataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D41E842B3A5FC900E36952 /* ExpenseListVC+dataDelegate.swift */; };
+		F1D41E872B3A680700E36952 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D41E862B3A680700E36952 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,6 +185,9 @@
 		F1A50D912B34B0EA00D5C43B /* MaxSizeOptionalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaxSizeOptionalView.swift; sourceTree = "<group>"; };
 		F1A50D922B34B0EA00D5C43B /* DYGridChartHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYGridChartHeaderView.swift; sourceTree = "<group>"; };
 		F1A50D932B34B0EA00D5C43B /* MeasureViewSizeModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureViewSizeModifier.swift; sourceTree = "<group>"; };
+		F1D41E822B3A5F8800E36952 /* ExpenseListVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpenseListVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
+		F1D41E842B3A5FC900E36952 /* ExpenseListVC+dataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpenseListVC+dataDelegate.swift"; sourceTree = "<group>"; };
+		F1D41E862B3A680700E36952 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +363,8 @@
 				A166B91F2B27E38B001D1CC6 /* RecordVC.swift */,
 				A1EAC1EB2B28915100F7DC2F /* Expense.storyboard */,
 				A166B9202B27E38B001D1CC6 /* ExpenseListVC.swift */,
+				F1D41E822B3A5F8800E36952 /* ExpenseListVC+TableViewDelegate.swift */,
+				F1D41E842B3A5FC900E36952 /* ExpenseListVC+dataDelegate.swift */,
 				F1A50D702B34AEEA00D5C43B /* ExpensesViewModel.swift */,
 				A1A68C032B29AB3C00C9EE2C /* ExpenseListVC+SalaryPopup.swift */,
 				A166B9212B27E38B001D1CC6 /* ExpenseCell.xib */,
@@ -396,6 +404,7 @@
 			isa = PBXGroup;
 			children = (
 				A146B6E02B271D5900A3650E /* HomeView.swift */,
+				F1D41E862B3A680700E36952 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -630,6 +639,8 @@
 				A1A68C042B29AB3C00C9EE2C /* ExpenseListVC+SalaryPopup.swift in Sources */,
 				F1A50D952B34B0EA00D5C43B /* DYPieChartSettings.swift in Sources */,
 				A1A68C062B29B67C00C9EE2C /* Constant.swift in Sources */,
+				F1D41E852B3A5FC900E36952 /* ExpenseListVC+dataDelegate.swift in Sources */,
+				F1D41E832B3A5F8900E36952 /* ExpenseListVC+TableViewDelegate.swift in Sources */,
 				F1A50DA32B34B0EA00D5C43B /* DYDataPoint.swift in Sources */,
 				F1A50DAE2B34B0EA00D5C43B /* MeasureViewSizeModifier.swift in Sources */,
 				A14430BA2B294E7100589270 /* iActivityIndicatorStyle.swift in Sources */,
@@ -642,6 +653,7 @@
 				F1A50DAA2B34B0EA00D5C43B /* MultiSeriesLegendView.swift in Sources */,
 				A146B6E32B271D5900A3650E /* ExpensesView.swift in Sources */,
 				F1A50DAC2B34B0EA00D5C43B /* MaxSizeOptionalView.swift in Sources */,
+				F1D41E872B3A680700E36952 /* HomeViewModel.swift in Sources */,
 				F1A50D962B34B0EA00D5C43B /* DYPlotAreaSettings.swift in Sources */,
 				A14430C02B29564B00589270 /* Loadder.swift in Sources */,
 				A1EAC1EA2B288E4700F7DC2F /* SpeechRecognizer.swift in Sources */,

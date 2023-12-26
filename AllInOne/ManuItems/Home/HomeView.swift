@@ -116,15 +116,3 @@ extension View {
         self.background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.white.opacity(0.4)]), startPoint: .topLeading, endPoint: .bottomTrailing)).shadow(radius: 5))
     }
 }
-
-final class BasicPieChartViewModel: ObservableObject {
-    
-    @Published var data: [DYPieFraction]
-    @Published var selectedSlice: DYPieFraction?
-    
-    init() {
-        self.data = DYPieFraction.exampleData()
-        
-    }
-    
-}

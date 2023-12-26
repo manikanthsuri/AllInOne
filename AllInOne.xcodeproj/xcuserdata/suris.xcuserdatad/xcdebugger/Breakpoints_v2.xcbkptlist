@@ -102,77 +102,110 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "173A89F0-8E44-4684-9139-56E799CCBCB5"
-            shouldBeEnabled = "Yes"
+            uuid = "E0A5E397-B769-4F53-9B18-CBFA33CBCAB7"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AllInOne/SwiftUIGraphs/Views/Pie Chart/DYFractionChartLegendView.swift"
+            filePath = "AllInOne/Expense/ExpenseListVC+dataDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "dataDidUpdate(newData:ofType:error:)"
+            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "173A89F0-8E44-4684-9139-56E799CCBCB5 - 9e1286dd69403bf2"
+                  uuid = "E0A5E397-B769-4F53-9B18-CBFA33CBCAB7 - 68b8fad99e705f0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;, AllInOne.DYPieFraction, &lt;&lt;opaque return type of AllInOne.DYFractionChartLegendView.content(fraction: AllInOne.DYPieFraction) -&gt; some&gt;&gt;.0&gt; in closure #1 (Swift.Array&lt;AllInOne.DYPieFraction&gt;) -&gt; SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;, AllInOne.DYPieFraction, &lt;&lt;opaque return type of AllInOne.DYFractionChartLegendView.content(fraction: AllInOne.DYPieFraction) -&gt; some&gt;&gt;.0&gt;&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;&gt;, Swift.Array&lt;AllInOne.DYPieFraction&gt;, SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;, AllInOne.DYPieFraction, &lt;&lt;opaque return type of AllInOne.DYFractionChartLegendView.content(fraction: AllInOne.DYPieFraction) -&gt; some&gt;&gt;.0&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in AllInOne.DYFractionChartLegendView.body.getter : some"
+                  symbolName = "AllInOne.ExpenseListVC.dataDidUpdate(newData: Swift.Array&lt;AllInOne.RecordModel&gt;, ofType: AllInOne.fetchDataType, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
                   moduleName = "AllInOne"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/suris/Documents/GitHub/AllInOne/AllInOne/SwiftUIGraphs/Views/Pie%20Chart/DYFractionChartLegendView.swift"
+                  urlString = "file:///Users/suris/Documents/GitHub/AllInOne/AllInOne/Expense/ExpenseListVC+dataDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "148">
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "132">
                </Location>
                <Location
-                  uuid = "173A89F0-8E44-4684-9139-56E799CCBCB5 - b8fcc8a614e4490e"
+                  uuid = "E0A5E397-B769-4F53-9B18-CBFA33CBCAB7 - b52ed98e8189b9e8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (AllInOne.DYPieFraction) -&gt; &lt;&lt;opaque return type of AllInOne.DYFractionChartLegendView.content(fraction: AllInOne.DYPieFraction) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;, AllInOne.DYPieFraction, &lt;&lt;opaque return type of AllInOne.DYFractionChartLegendView.content(fraction: AllInOne.DYPieFraction) -&gt; some&gt;&gt;.0&gt; in closure #1 (Swift.Array&lt;AllInOne.DYPieFraction&gt;) -&gt; SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;, AllInOne.DYPieFraction, &lt;&lt;opaque return type of AllInOne.DYFractionChartLegendView.content(fraction: AllInOne.DYPieFraction) -&gt; some&gt;&gt;.0&gt;&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;&gt;, Swift.Array&lt;AllInOne.DYPieFraction&gt;, SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;, AllInOne.DYPieFraction, &lt;&lt;opaque return type of AllInOne.DYFractionChartLegendView.content(fraction: AllInOne.DYPieFraction) -&gt; some&gt;&gt;.0&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in AllInOne.DYFractionChartLegendView.body.getter : some"
+                  symbolName = "AllInOne.ExpenseListVC.dataDidUpdate(newData: Swift.Array&lt;Any&gt;, ofType: AllInOne.fetchDataType, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
                   moduleName = "AllInOne"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/suris/Documents/GitHub/AllInOne/AllInOne/SwiftUIGraphs/Views/Pie%20Chart/DYFractionChartLegendView.swift"
+                  urlString = "file:///Users/suris/Documents/GitHub/AllInOne/AllInOne/Expense/ExpenseListVC+dataDelegate.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "650C5D46-6E56-4ADA-9DAB-73BE0B5DCE63"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllInOne/Expense/ExpensesViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getExpenseList()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "650C5D46-6E56-4ADA-9DAB-73BE0B5DCE63 - be6d33e45d2b69d5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AllInOne.ExpensesViewModel.getExpenseList() -&gt; ()"
+                  moduleName = "AllInOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suris/Documents/GitHub/AllInOne/AllInOne/Expense/ExpensesViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "650C5D46-6E56-4ADA-9DAB-73BE0B5DCE63 - 3bcacbd552d9a32d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Dictionary&lt;Swift.String, Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Error&gt;) -&gt; () in AllInOne.ExpensesViewModel.getExpenseList() -&gt; ()"
+                  moduleName = "AllInOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suris/Documents/GitHub/AllInOne/AllInOne/Expense/ExpensesViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
                   offsetFromSymbolStart = "72">
                </Location>
                <Location
-                  uuid = "173A89F0-8E44-4684-9139-56E799CCBCB5 - c4ee00fe221e14a"
+                  uuid = "650C5D46-6E56-4ADA-9DAB-73BE0B5DCE63 - 3bcacbd552d9a32d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;, AllInOne.DYPieFraction, &lt;&lt;opaque return type of AllInOne.DYFractionChartLegendView.content(fraction: AllInOne.DYPieFraction) -&gt; some&gt;&gt;.0&gt; in closure #1 (Swift.Array&lt;AllInOne.DYPieFraction&gt;) -&gt; SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;, AllInOne.DYPieFraction, &lt;&lt;opaque return type of AllInOne.DYFractionChartLegendView.content(fraction: AllInOne.DYPieFraction) -&gt; some&gt;&gt;.0&gt;&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;&gt;, Swift.Array&lt;AllInOne.DYPieFraction&gt;, SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;, AllInOne.DYPieFraction, &lt;&lt;opaque return type of AllInOne.DYFractionChartLegendView.content(fraction: AllInOne.DYPieFraction) -&gt; some&gt;&gt;.0&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 (SwiftUI.GeometryProxy) -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in AllInOne.DYFractionChartLegendView.body.getter : some"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Dictionary&lt;Swift.String, Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Error&gt;) -&gt; () in AllInOne.ExpensesViewModel.getExpenseList() -&gt; ()"
                   moduleName = "AllInOne"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/suris/Documents/GitHub/AllInOne/AllInOne/SwiftUIGraphs/Views/Pie%20Chart/DYFractionChartLegendView.swift"
+                  urlString = "file:///Users/suris/Documents/GitHub/AllInOne/AllInOne/Expense/ExpensesViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "148">
-               </Location>
-               <Location
-                  uuid = "173A89F0-8E44-4684-9139-56E799CCBCB5 - c6a481a522088e4f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (AllInOne.DYPieFraction) -&gt; &lt;&lt;opaque return type of AllInOne.DYFractionChartLegendView.content(fraction: AllInOne.DYPieFraction) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;, AllInOne.DYPieFraction, &lt;&lt;opaque return type of AllInOne.DYFractionChartLegendView.content(fraction: AllInOne.DYPieFraction) -&gt; some&gt;&gt;.0&gt; in closure #1 (Swift.Array&lt;AllInOne.DYPieFraction&gt;) -&gt; SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;, AllInOne.DYPieFraction, &lt;&lt;opaque return type of AllInOne.DYFractionChartLegendView.content(fraction: AllInOne.DYPieFraction) -&gt; some&gt;&gt;.0&gt;&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;&gt;, Swift.Array&lt;AllInOne.DYPieFraction&gt;, SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Array&lt;AllInOne.DYPieFraction&gt;, AllInOne.DYPieFraction, &lt;&lt;opaque return type of AllInOne.DYFractionChartLegendView.content(fraction: AllInOne.DYPieFraction) -&gt; some&gt;&gt;.0&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 (SwiftUI.GeometryProxy) -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in AllInOne.DYFractionChartLegendView.body.getter : some"
-                  moduleName = "AllInOne"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/suris/Documents/GitHub/AllInOne/AllInOne/SwiftUIGraphs/Views/Pie%20Chart/DYFractionChartLegendView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
-                  offsetFromSymbolStart = "72">
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "88">
                </Location>
             </Locations>
          </BreakpointContent>
