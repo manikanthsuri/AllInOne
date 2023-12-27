@@ -45,12 +45,3 @@ public struct DYFractionChartInfoView: View {
         return self.data.filter({$0.id == id}).first
     }
 }
-
-struct DYFractionChartHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        let data = DYPieFraction.exampleData()
-        return DYFractionChartInfoView(title: "Example data", data: data, selectedSlice: .constant(data.first!), valueConverter: { value in
-            value.toCurrencyString()
-        })
-    }
-}

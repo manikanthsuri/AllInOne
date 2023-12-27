@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @StateObject var viewModel = BasicPieChartViewModel()
+    @StateObject var viewModel = HomeViewModel()
     @Namespace var animationNamespace
     @State private var pieScale:CGSize = .zero
     @Binding var presentSideMenu: Bool
@@ -74,7 +74,7 @@ struct HomeView: View {
         }
     }
     func calculateLegendHeight() -> CGFloat {
-        let rows = viewModel.data.count / 3 + (viewModel.data.count % 3 == 0 ? 0 : 1)
+        let rows = viewModel.data.count / 2 + (viewModel.data.count % 2 == 0 ? 0 : 1)
         let rowHeight = 30 // Adjust this based on your LegendItem height
         let spacing = 10 // Adjust this based on your LegendItem spacing
         return CGFloat(rows) * CGFloat(rowHeight) + CGFloat((rows - 1) * spacing) + 20 // Adjust for additional padding

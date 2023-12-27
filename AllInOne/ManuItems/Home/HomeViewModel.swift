@@ -6,23 +6,22 @@
 //
 
 import Foundation
-class HomeViewModel {
+import UIKit
+
+class HomeViewModel: ObservableObject {
     
-    @Published var data: [DYPieFraction]
+    @Published var data: [DYPieFraction] = []
     @Published var selectedSlice: DYPieFraction?
    
     init() {
-       getData()
+        let viewModel = ExpensesViewModel()
+        viewModel.delegate = self
+        viewModel.getExpenseList()
     }
     
 }
 extension HomeViewModel: dataDelegate {
    
-    func getData () {
-        let viewModel = ExpensesViewModel()
-        viewModel.delegate = self
-        viewModel.getExpenseList()
-    }
     func dataDidUpdate(newData: [Any], ofType type: fetchDataType, error: Error?) {
         if error == nil && type == .expenses{
             guard let records = newData as? [RecordModel] else {
@@ -44,4 +43,3 @@ extension HomeViewModel: dataDelegate {
         return fractions
     }
 }
-

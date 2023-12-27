@@ -36,7 +36,7 @@ class ExpensesViewModel {
     
     func getExpenseList() {
         
-        FireBaseManager.shared.getExpensesList(completion: { [weak self] result in
+        FireBaseManager.shared.getExpensesList(completion: { result in
             switch result {
             case .success(let data):
                 let expenses = data.values.compactMap { entry in
@@ -54,9 +54,9 @@ class ExpensesViewModel {
                         return nil
                     }
                 }
-                self?.delegate?.dataDidUpdate(newData: expenses, ofType: .expenses, error: nil)
+                self.delegate?.dataDidUpdate(newData: expenses, ofType: .expenses, error: nil)
             case .failure(let error):
-                self?.delegate?.dataDidUpdate(newData: [], ofType: .expenses, error: error)
+                self.delegate?.dataDidUpdate(newData: [], ofType: .expenses, error: error)
             }
         })
     }

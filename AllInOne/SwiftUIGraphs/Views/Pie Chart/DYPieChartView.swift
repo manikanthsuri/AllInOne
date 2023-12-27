@@ -165,29 +165,6 @@ public struct DYPieChartView<L: View>: View, DYPieChartModifiableProperties {
 
 }
 
-// combine fill color
-
-
-
-
-
-
-struct DYPieChartView_Previews: PreviewProvider {
-    @Namespace static var placeholder
-    static var previews: some View {
-        let data = DYPieFraction.exampleData()
-        DYPieChartView(data: data, selectedSlice: .constant(data.first!), sliceLabelView: { fraction in
-            VStack {
-                Text(fraction.title).font(.body)
-                Text(fraction.value.toCurrencyString()).font(.callout).bold()
-                Text(fraction.value.percentageString(totalValue: data.reduce(0) { $0 + $1.value})).font(.callout)
-                
-            }
-        }, animationNamespace: Self.placeholder).padding()
-    }
-
-}
-
 public protocol DYPieChartModifiableProperties where Self: View {
     
     associatedtype L: View  // slice label view

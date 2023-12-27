@@ -59,9 +59,3 @@ extension Array {
         }
     }
 }
-struct SwiftUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        DYFractionChartLegendView(data: DYPieFraction.exampleData(), font: Font.caption, textColor: .primary)
-            .frame(width: 250, height: 250)
-    }
-}
