@@ -50,7 +50,7 @@ extension ExpenseListVC: dataDelegate {
                     if let error = error {
                         AlertHelperKit().showAlert(self, title: "Something went wrong", message: "\(error)", button: "Ok")
                     }
-                   
+                    
                 }
             }
         } else {
@@ -65,7 +65,6 @@ extension ExpenseListVC: dataDelegate {
                 expenses = records
                 expenseListTblView.reloadData()
             }
-            
         }
     }
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -51,14 +51,6 @@
                                     <constraint firstItem="vJp-l5-SjD" firstAttribute="top" secondItem="amf-aW-4s7" secondAttribute="top" id="hLi-oI-mIm"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4gg-m2-896">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5Wt-ID-Owq"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SYg-Q8-bxA"/>
-                                </connections>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1eH-0N-pvQ">
                                 <rect key="frame" x="10" y="251" width="373" height="375"/>
                                 <subviews>
@@ -99,7 +91,6 @@
                                                                 <rect key="frame" x="5" y="0.0" width="348" height="35"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <connections>
-                                                                    <action selector="fromAccountBtnAction:" destination="nTO-DU-e8B" eventType="touchUpInside" id="1lj-su-ZyC"/>
                                                                     <action selector="monthBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mf8-KH-py2"/>
                                                                 </connections>
                                                             </button>
@@ -153,7 +144,6 @@
                                                                 <rect key="frame" x="5" y="0.0" width="348" height="35"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <connections>
-                                                                    <action selector="fromAccountBtnAction:" destination="nTO-DU-e8B" eventType="touchUpInside" id="Iiu-W4-giP"/>
                                                                     <action selector="yearBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0I-uv-Tgn"/>
                                                                 </connections>
                                                             </button>
@@ -253,7 +243,6 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="saveBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XIm-V1-Lqq"/>
-                                                            <action selector="submitButtonAction:" destination="nTO-DU-e8B" eventType="touchUpInside" id="hY5-Zn-Ybl"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -269,6 +258,14 @@
                                     <constraint firstAttribute="height" constant="375" id="jpn-wl-VP6"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4gg-m2-896">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5Wt-ID-Owq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SYg-Q8-bxA"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
@@ -735,7 +732,7 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lh-vZ-YxS">
                                         <rect key="frame" x="10" y="500" width="373" height="40"/>
-                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                        <color key="backgroundColor" red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="5I9-TR-uiz"/>
                                         </constraints>
@@ -748,6 +745,14 @@
                                             <action selector="submitButtonAction:" destination="nTO-DU-e8B" eventType="touchUpInside" id="uP6-o6-Lgn"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaN-1O-dEh">
+                                        <rect key="frame" x="279" y="722" width="64" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Auto Add"/>
+                                        <connections>
+                                            <action selector="autoAddBtnAction:" destination="nTO-DU-e8B" eventType="touchUpInside" id="VHD-HC-25i"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -756,7 +761,9 @@
                                     <constraint firstItem="7Lh-vZ-YxS" firstAttribute="leading" secondItem="Yum-XG-0xd" secondAttribute="leading" constant="10" id="Q4S-RB-Nvg"/>
                                     <constraint firstItem="cFU-wA-pLj" firstAttribute="leading" secondItem="Yum-XG-0xd" secondAttribute="leading" id="TD1-yB-s1r"/>
                                     <constraint firstAttribute="trailing" secondItem="cFU-wA-pLj" secondAttribute="trailing" id="f8J-j7-G5H"/>
+                                    <constraint firstAttribute="bottom" secondItem="WaN-1O-dEh" secondAttribute="bottom" constant="50" id="n29-82-Qln"/>
                                     <constraint firstAttribute="trailing" secondItem="7Lh-vZ-YxS" secondAttribute="trailing" constant="10" id="pV0-6I-Ii0"/>
+                                    <constraint firstAttribute="trailing" secondItem="WaN-1O-dEh" secondAttribute="trailing" constant="50" id="usI-jq-0oM"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -778,6 +785,7 @@
                         <outlet property="amountTF" destination="sg9-tm-KKX" id="XeP-hP-aMi"/>
                         <outlet property="amountTFView" destination="s1Q-ZT-AfG" id="b8I-WW-Mvq"/>
                         <outlet property="amountView" destination="Uw7-kw-ZSp" id="Hxw-B9-bK8"/>
+                        <outlet property="autoAddBtn" destination="WaN-1O-dEh" id="TvM-qX-2Om"/>
                         <outlet property="dateBtn" destination="Bmv-oY-yqi" id="Iqj-fr-bwF"/>
                         <outlet property="dateLabel" destination="bor-6Z-XQT" id="De9-lX-YdE"/>
                         <outlet property="dateTF" destination="FZX-Oh-tev" id="Dev-DN-DSx"/>
@@ -929,13 +937,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

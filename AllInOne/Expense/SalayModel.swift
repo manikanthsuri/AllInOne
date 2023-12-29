@@ -9,16 +9,16 @@ import Foundation
 
 public struct SalayModel:Codable {
 
-    public var month: String
-    public var year: String
+    public var createdOn: String
+    public var uniqueId: String
     public var salary: String
    
     public init(
-        month: String,
-        year: String,
+        createdOn: String,
+        uniqueId: String,
         salary:String) {
-        self.month = month
-        self.year = year
+        self.createdOn = createdOn
+        self.uniqueId = uniqueId
         self.salary = salary
     }
 

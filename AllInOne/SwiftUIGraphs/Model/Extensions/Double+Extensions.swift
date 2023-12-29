@@ -11,15 +11,15 @@ public extension Double {
     
     
     static func normalizationFactor(value: Double, maxValue: Double, minValue: Double)->Double {
-       
-       return (value - minValue) / (maxValue - minValue)
-   }
+        
+        return (value - minValue) / (maxValue - minValue)
+    }
     
     func convertToCoordinate(min: Double, max: Double,  length: CGFloat)->CGFloat {
-       
+        
         return length * CGFloat(Double.normalizationFactor(value: self, maxValue: max, minValue: min))
-
-   }
+        
+    }
     
     func toDecimalString(maxFractionDigits: Int)->String {
         let formatter = NumberFormatter()
@@ -29,26 +29,25 @@ public extension Double {
         return formatter.string(from: number)!
     }
     
-    func toCurrencyString(symbol:String = "USD", maxDigits: Int = 0)->String {
+    func toCurrencyString(symbol:String = "₹", maxDigits: Int = 0)->String {
         
-            let formatter = NumberFormatter()
-            formatter.numberStyle = .currency
-            formatter.currencySymbol = symbol
-            formatter.maximumFractionDigits = maxDigits
-            return formatter.string(for: self)!
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencySymbol = symbol
+        formatter.maximumFractionDigits = maxDigits
+        return formatter.string(for: self)!
         
     }
-
- 
+    
     func decimalsCount() -> Int {
         if self == Double(Int(self)) {
             return 0
         }
-
+        
         let integerString = String(Int(self))
         let doubleString = String(Double(self))
         let decimalCount = doubleString.count - integerString.count - 1
-
+        
         return decimalCount
     }
     
@@ -84,6 +83,7 @@ public extension Int {
 
 
 public extension TimeInterval {
+    
     func toString()->String? {
 
         let formatter = DateComponentsFormatter()

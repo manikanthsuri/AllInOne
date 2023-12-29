@@ -11,16 +11,15 @@ extension FireBaseManager {
     
     public func insertSalaryRecord(record: SalayModel,completion: @escaping (Result<Bool, Error>) -> Void) {
         
-        let uniqueId = "\(record.month)-\(record.year)"
         let recordDict = [
             "salary": record.salary,
-            "createdOn": DataHelper.getCurrentDateString(),
-            "uniqueId": uniqueId
+            "createdOn": record.createdOn,
+            "uniqueId": record.uniqueId
         ] as [String : Any]
         
-        let record = ["data": recordDict] as [String : Any]
+        let dataRecord = ["data": recordDict] as [String : Any]
         
-        tableRef.child(salaryTable).child(uniqueId).setValue(record) { (error, ref) in
+        tableRef.child(salaryTable).child(record.uniqueId).setValue(dataRecord) { (error, ref) in
             if let error = error {
                 completion(.failure(error))
             } else {
@@ -28,22 +27,31 @@ extension FireBaseManager {
             }
         }
     }
-        
-    public func getSalaryDetailsList(completion: @escaping (Result<Bool, Error>) -> Void) {
+    
+    public func getSalaryDetailsList(completion: @escaping (Result<String, Error>) -> Void) {
         
         tableRef.child(salaryTable).observeSingleEvent(of: .value) { (snapshot, error) in
             
             if let error = error {
                 completion(.failure(error as! Error))
             } else {
-               
                 let uniqueKey = DataHelper.getMonthYearString()
                 if let data = snapshot.value as? [String: Any] {
-                    guard (data[uniqueKey] != nil) else {
+                    guard let dataValues = data[uniqueKey] as? [String : [String:Any]] else {
                         completion(.failure(DataError.notFoundError))
                         return
                     }
-                    completion(.success(true))
+                    let salaryArray = dataValues.values.compactMap { entry in
+                        do {
+                            let jsonData = try JSONSerialization.data(withJSONObject: entry)
+                            let transaction = try JSONDecoder().decode(SalayModel.self, from: jsonData)
+                            return transaction
+                        } catch {
+                            return nil
+                        }
+                    }
+                    completion(.success(salaryArray[0].salary))
+                    
                 } else {
                     completion(.failure(DataError.notFoundError))
                 }

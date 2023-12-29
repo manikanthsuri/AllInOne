@@ -77,6 +77,9 @@
 		A1EAC1EA2B288E4700F7DC2F /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EAC1E92B288E4700F7DC2F /* SpeechRecognizer.swift */; };
 		A1EAC1EC2B28915100F7DC2F /* Expense.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EAC1EB2B28915100F7DC2F /* Expense.storyboard */; };
 		A1EAC1EE2B28949000F7DC2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EAC1ED2B28949000F7DC2F /* AppDelegate.swift */; };
+		F15A61602B3EC64500D4FDE0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15A615F2B3EC64500D4FDE0 /* Launch Screen.storyboard */; };
+		F15A61642B3F1F7A00D4FDE0 /* FireBaseManager+Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15A61632B3F1F7A00D4FDE0 /* FireBaseManager+Configs.swift */; };
+		F15A61662B3F314400D4FDE0 /* AddRecordVC+autoAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15A61652B3F314400D4FDE0 /* AddRecordVC+autoAdd.swift */; };
 		F18EAB6F2B2D85A20017E83E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18EAB6E2B2D85A20017E83E /* Protocols.swift */; };
 		F18EAB722B2DB5D50017E83E /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18EAB702B2DB5D40017E83E /* ReminderView.swift */; };
 		F18EAB732B2DB5D50017E83E /* AgeDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18EAB712B2DB5D50017E83E /* AgeDiff.swift */; };
@@ -154,6 +157,9 @@
 		A1EAC1E92B288E4700F7DC2F /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		A1EAC1EB2B28915100F7DC2F /* Expense.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Expense.storyboard; sourceTree = "<group>"; };
 		A1EAC1ED2B28949000F7DC2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F15A615F2B3EC64500D4FDE0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F15A61632B3F1F7A00D4FDE0 /* FireBaseManager+Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FireBaseManager+Configs.swift"; sourceTree = "<group>"; };
+		F15A61652B3F314400D4FDE0 /* AddRecordVC+autoAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddRecordVC+autoAdd.swift"; sourceTree = "<group>"; };
 		F18EAB6E2B2D85A20017E83E /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		F18EAB702B2DB5D40017E83E /* ReminderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		F18EAB712B2DB5D50017E83E /* AgeDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeDiff.swift; sourceTree = "<group>"; };
@@ -312,6 +318,7 @@
 				A1EAC1ED2B28949000F7DC2F /* AppDelegate.swift */,
 				A146B6C62B271AF400A3650E /* AllInOne_SwiftUIApp.swift */,
 				F18EAB6E2B2D85A20017E83E /* Protocols.swift */,
+				F15A615F2B3EC64500D4FDE0 /* Launch Screen.storyboard */,
 				A146B6CA2B271AF600A3650E /* Assets.xcassets */,
 				A14430832B2935ED00589270 /* Dairy */,
 				A14430822B2935AF00589270 /* UIKitWrapperClasses */,
@@ -372,6 +379,7 @@
 				A166B9232B27E38B001D1CC6 /* RecordModel.swift */,
 				A1A68C0F2B29C75100C9EE2C /* SalayModel.swift */,
 				A166B9242B27E38B001D1CC6 /* AddRecordVC.swift */,
+				F15A61652B3F314400D4FDE0 /* AddRecordVC+autoAdd.swift */,
 			);
 			path = Expense;
 			sourceTree = "<group>";
@@ -395,6 +403,7 @@
 				A1A68C0D2B29C6EE00C9EE2C /* FireBaseManager+Salary.swift */,
 				A1A68C092B29BB3400C9EE2C /* DataHelper.swift */,
 				A1A68C0B2B29BBCA00C9EE2C /* DataHelper+Hex.swift */,
+				F15A61632B3F1F7A00D4FDE0 /* FireBaseManager+Configs.swift */,
 				A1A68C052B29B67C00C9EE2C /* Constant.swift */,
 			);
 			path = FireBase;
@@ -593,6 +602,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F15A61602B3EC64500D4FDE0 /* Launch Screen.storyboard in Resources */,
 				A146B6CE2B271AF600A3650E /* Preview Assets.xcassets in Resources */,
 				A1EAC1EC2B28915100F7DC2F /* Expense.storyboard in Resources */,
 				A166B93A2B27E3F3001D1CC6 /* GoogleService-Info.plist in Resources */,
@@ -660,6 +670,7 @@
 				F1A50D9C2B34B0EA00D5C43B /* String+Extensions.swift in Sources */,
 				A146B6E42B271D5900A3650E /* HomeView.swift in Sources */,
 				F1A50DAD2B34B0EA00D5C43B /* DYGridChartHeaderView.swift in Sources */,
+				F15A61642B3F1F7A00D4FDE0 /* FireBaseManager+Configs.swift in Sources */,
 				A166B9342B27E3E0001D1CC6 /* UIHelper.swift in Sources */,
 				A146B6C72B271AF400A3650E /* AllInOne_SwiftUIApp.swift in Sources */,
 				A166B92B2B27E38B001D1CC6 /* AddRecordVC.swift in Sources */,
@@ -672,6 +683,7 @@
 				F1A50DA72B34B0EA00D5C43B /* DYPieChartView.swift in Sources */,
 				A146B6DB2B271CD800A3650E /* MainTabbedView.swift in Sources */,
 				F18EAB6F2B2D85A20017E83E /* Protocols.swift in Sources */,
+				F15A61662B3F314400D4FDE0 /* AddRecordVC+autoAdd.swift in Sources */,
 				A166B9262B27E38B001D1CC6 /* RecordVC.swift in Sources */,
 				A14430BD2B294E7100589270 /* RotatingShapes.swift in Sources */,
 				A1A68C0E2B29C6EE00C9EE2C /* FireBaseManager+Salary.swift in Sources */,
@@ -806,24 +818,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AllInOne/Preview Content\"";
-				DEVELOPMENT_TEAM = XC2NYMLMQY;
+				DEVELOPMENT_TEAM = 87W7JL84XF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.suri.myExpense;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suri.allinone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -835,24 +851,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AllInOne/Preview Content\"";
-				DEVELOPMENT_TEAM = XC2NYMLMQY;
+				DEVELOPMENT_TEAM = 87W7JL84XF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.suri.myExpense;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suri.allinone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

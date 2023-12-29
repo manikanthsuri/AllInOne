@@ -6,7 +6,7 @@
 //
 import Foundation
 
-public struct RecordModel:Codable {
+public struct RecordModel: Equatable, Codable, Hashable{
 
     public var amount: Decimal
     public var fromAccount: String

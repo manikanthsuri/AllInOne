@@ -23,14 +23,14 @@ extension FireBaseManager {
             "sent": record.sent,
             "createdOn": DataHelper.getCurrentDateString(),
             "uniqueId": uniqueId
-            
         ] as [String : Any]
         
+        let childTable = "\(record.month)-\(record.year)"
         guard let recordDictJson = convertDictionaryToString(recordDict) else { return  }
         let hexString = stringToHex(recordDictJson)
         let record = ["data": hexString] as [String : Any]
         
-        tableRef.child(expensesTable).child(monthTable).child(uniqueId).setValue(record) { (error, ref) in
+        tableRef.child(expensesTable).child(childTable).child(uniqueId).setValue(record) { (error, ref) in
             if let error = error {
                 completion(.failure(error))
             } else {
@@ -72,8 +72,8 @@ extension FireBaseManager {
     
     public func deleteExpenseRecord(record: RecordModel,completion: @escaping (Result<Bool, Error>) -> Void) {
         let uniqueId = record.uniqueId ?? ""
-  
-        tableRef.child(expensesTable).child(monthTable).child(uniqueId).removeValue { (error, _) in
+        let childTable = "\(record.month)-\(record.year)"
+        tableRef.child(expensesTable).child(childTable).child(uniqueId).removeValue { (error, _) in
             if let error = error {
                 completion(.failure(error))
             } else {
@@ -94,5 +94,5 @@ extension FireBaseManager {
             }
         }
     }
-
+    
 }

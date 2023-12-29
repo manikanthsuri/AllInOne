@@ -26,8 +26,8 @@ class ExpensesViewModel {
         
         FireBaseManager.shared.getSalaryDetailsList(completion: {[weak self] result in
             switch result {
-            case .success(_):
-                self?.delegate?.dataDidUpdate(newData: [], ofType: .salary, error: nil)
+            case .success(let data):
+                self?.delegate?.dataDidUpdate(newData: [data], ofType: .salary, error: nil)
             case .failure(let error):
                 self?.delegate?.dataDidUpdate(newData: [], ofType: .salary, error: error)
             }

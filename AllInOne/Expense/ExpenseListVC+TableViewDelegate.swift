@@ -23,16 +23,16 @@ extension ExpenseListVC: UITableViewDataSource {
         cell.dateLbl.text = "\(record.date)-\(record.month)-\(record.year)"
         cell.createdDateLbl.text = record.createdOn
         cell.reasonLbl.text = "For : \(record.reason ?? "")"
-        let images = getImagesForTransaction(record: record)
-        if images.count == 3 {
-            cell.arrowImgView.image = images[1]
-            cell.fromImgView.image = images[0]
-            cell.toImgView.image = images[2]
-        } else {
-            cell.arrowImgView.isHidden = true
-            cell.fromImgView.isHidden = true
-            cell.toImgView.isHidden = true
-        }
+//        let images = getImagesForTransaction(record: record)
+//        if images.count == 3 {
+//            cell.arrowImgView.image = images[1]
+//            cell.fromImgView.image = images[0]
+//            cell.toImgView.image = images[2]
+//        } else {
+//            cell.arrowImgView.isHidden = true
+//            cell.fromImgView.isHidden = true
+//            cell.toImgView.isHidden = true
+//        }
         if record.sent {
             cell.paidImgView.isHidden = false
         } else {
@@ -50,6 +50,7 @@ extension ExpenseListVC: UITableViewDataSource {
             FireBaseManager.shared.deleteExpenseRecord(record: record) { result in
                 switch result {
                 case .success(_):
+                    self.expenses.remove(elementsToRemove: [record])
                     self.expenseListTblView.reloadData()
                 case .failure(let error):
                     print("Failure: \(error)")

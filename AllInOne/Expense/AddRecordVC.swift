@@ -52,6 +52,8 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var submitBtn: UIButton!
     
+    @IBOutlet weak var autoAddBtn: UIButton!
+    
     var isfromEdit = false
     var selectedRecord: RecordModel? = nil
     var addUpdateDelegate: dataAddUpdateProtocol?
@@ -81,6 +83,9 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
             titleLbl.text = "Update Expense"
         } else {
             titleLbl.text = "Add Expense"
+        }
+        if showAutoAdd {
+            autoAddBtn.isHidden = false
         }
         
     }
@@ -174,37 +179,23 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
             }
         }
     }
-
+    
     func setValues(){
         
         guard let record = selectedRecord else {
             return
         }
         amountTF.text = "\(record.amount)"
-        amountTF.isUserInteractionEnabled = false
-        amountTFView.backgroundColor = .lightGray
-        
         fromAccountTF.text = record.fromAccount
-        fromAccountTF.isUserInteractionEnabled = false
-        fromAccountTFView.backgroundColor = .lightGray
-        
         toAccountTF.text = record.toAccount
-        toAccountTF.isUserInteractionEnabled = false
-        toAccountTFView.backgroundColor = .lightGray
-        
         forTF.text = record.reason
         dateTF.text = record.date
-        
         monthTF.text = record.month
-        monthTF.isUserInteractionEnabled = false
-        monthTF.backgroundColor = .lightGray
-        
         yearTF.text = record.year
-        yearTF.isUserInteractionEnabled = false
-        yearTF.backgroundColor = .lightGray
-        
         sentTF.text = "\(record.sent)"
-        
+    }
+    @IBAction func autoAddBtnAction(_ sender: Any) {
+        fetchDataFromJson()
     }
     @IBAction func submitButtonAction(_ sender: UIButton) {
         

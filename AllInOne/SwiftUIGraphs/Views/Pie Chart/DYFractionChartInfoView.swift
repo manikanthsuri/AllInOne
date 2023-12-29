@@ -12,22 +12,23 @@ public struct DYFractionChartInfoView: View {
     
     let title: String
     let data: [DYPieFraction]
+    let total: Double
     @Binding var selectedSlice: DYPieFraction?
     let valueConverter: (Double)->String
     
-    /// DYFractionChartInfoView initializer
-    /// - Parameters:
-    ///   - title: a title.
-    ///   - data: an array of DYChartFractions
-    ///   - selectedSlice: the selected DYChartFraction
-    ///   - valueConverter: implement a logic to convert the double value to a string.
-    public init(title: String, data: [DYPieFraction], selectedSlice: Binding<DYPieFraction?>, valueConverter: @escaping (Double)->String) {
-        self.title = title
-        self.data = data
-        self._selectedSlice = selectedSlice
-        self.valueConverter = valueConverter
-        
-    }
+    public init(
+        title: String,
+        data: [DYPieFraction],
+        total: Double,
+        selectedSlice: Binding<DYPieFraction?>,
+        valueConverter: @escaping (Double)->String) {
+            self.title = title
+            self.data = data
+            self.total = total
+            self._selectedSlice = selectedSlice
+            self.valueConverter = valueConverter
+            
+        }
     
     public var body: some View {
         VStack(alignment: .leading, spacing: 5) {
@@ -35,8 +36,12 @@ public struct DYFractionChartInfoView: View {
                 Text(self.title).font(.headline).bold()
             }
             if let fraction = selectedSlice {
-                Text(fraction.title).font(.headline)
-                Text(self.valueConverter(fraction.value) + " - " + fraction.value.percentageString(totalValue: data.reduce(0) { $0 + $1.value}) )
+                Text(self.valueConverter(fraction.value)).font(.headline).bold()
+                Text("\(fraction.value.percentageString(totalValue: total)) In Salary").font(.subheadline).bold()
+                if let record = fraction.record {
+                    Text("To - \(record.toAccount)").font(.subheadline)
+                    Text("Status - \(record.sent ? "Paid" : "Unpaid")").font(.subheadline)
+                }
             }
         }
     }

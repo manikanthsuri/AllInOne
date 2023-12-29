@@ -49,8 +49,8 @@ extension ExpenseListVC {
             return
         }
         let record = SalayModel(
-            month: month,
-            year: year,
+            createdOn: DataHelper.getCurrentDateString(),
+            uniqueId: "\(month)-\(year)",
             salary: salary)
         
             FireBaseManager.shared.insertSalaryRecord(

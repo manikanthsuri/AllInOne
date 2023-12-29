@@ -12,7 +12,6 @@ enum SideMenuRowType: Int, CaseIterable{
     case expenses
     case dairy
     case ageDiff
-    case timeDiff
     case reminder
     
     var title: String{
@@ -24,9 +23,7 @@ enum SideMenuRowType: Int, CaseIterable{
         case .dairy:
             return "Record Dairy"
         case .ageDiff:
-            return "Time Convert"
-        case .timeDiff:
-            return "Time Difference"
+            return "Time Calculator"
         case .reminder:
             return "Remind Me"
         }
@@ -36,8 +33,14 @@ enum SideMenuRowType: Int, CaseIterable{
         switch self {
         case .home:
             return "home"
-        default:
-            return "favorite"
+        case .expenses:
+            return "expenses"
+        case .dairy:
+            return "dairy"
+        case .ageDiff:
+            return "calculator"
+        case .reminder:
+            return "remindme"
         }
     }
 }
@@ -54,7 +57,7 @@ struct SideMenuView: View {
                 Rectangle()
                     .fill(.white)
                     .frame(width: 270)
-                    .shadow(color: .purple.opacity(0.1), radius: 5, x: 0, y: 3)
+                    .shadow(color: .mint, radius: 5, x: 0, y: 3)
                 
                 VStack(alignment: .leading, spacing: 0) {
                     ProfileImageView()
@@ -93,7 +96,7 @@ struct SideMenuView: View {
                     .frame(width: 100, height: 100)
                     .overlay(
                         RoundedRectangle(cornerRadius: 50)
-                            .stroke(.purple.opacity(0.5), lineWidth: 10)
+                            .stroke(.mint, lineWidth: 10)
                     )
                     .cornerRadius(50)
                 Spacer()
@@ -116,27 +119,30 @@ struct SideMenuView: View {
             VStack(alignment: .leading){
                 HStack(spacing: 20){
                     Rectangle()
-                        .fill(isSelected ? .purple : .white)
+                        .fill(isSelected ? .red : .white)
                         .frame(width: 5)
                     
                     ZStack{
                         Image(imageName)
                             .resizable()
                             .renderingMode(.template)
-                            .foregroundColor(isSelected ? .black : .gray)
+                            .foregroundColor(.black)
                             .frame(width: 26, height: 26)
                     }
                     .frame(width: 30, height: 30)
                     Text(title)
-                        .font(.system(size: 14, weight: .regular))
-                        .foregroundColor(isSelected ? .black : .gray)
+                        .font(.system(size: 14, weight: .bold))
+                        .foregroundColor(.black)
                     Spacer()
                 }
             }
         }
         .frame(height: 50)
         .background(
-            LinearGradient(colors: [isSelected ? .purple.opacity(0.5) : .white, .white], startPoint: .leading, endPoint: .trailing)
+            LinearGradient(
+                colors: [isSelected ? .mint : .clear],
+                startPoint: .leading,
+                endPoint: .trailing)
         )
     }
 }

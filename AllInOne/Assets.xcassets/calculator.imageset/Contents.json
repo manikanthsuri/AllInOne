@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "resume.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "calculator.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
