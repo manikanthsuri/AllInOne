@@ -78,6 +78,22 @@ struct HomeView: View {
                 .shadow(radius: 8))
             .scaleEffect(self.pieScale)
             .padding(10)
+            Spacer()
+            VStack(alignment: .leading, spacing: 5) {
+                Text(viewModel.salaryText()).font(.headline).bold()
+                Text(viewModel.expensesText()).font(.headline).bold()
+                Text(viewModel.balanceText()).font(.headline).bold()
+            }
+            .padding()
+            .frame(width: 200,height: 100)
+            .background(
+                LinearGradient(
+                    gradient: Gradient(
+                        colors: [Color.pink, Color.white.opacity(0.9)]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing)
+            )
+            Spacer()
         }.onAppear {
             withAnimation(.spring()) {
                 self.pieScale = CGSize(width: 1, height: 1)

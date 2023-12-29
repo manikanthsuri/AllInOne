@@ -14,6 +14,7 @@ class HomeViewModel: ObservableObject {
     @Published var data: [DYPieFraction] = []
     @Published var selectedSlice: DYPieFraction?
     @Published var salary: Double?
+    var records = [RecordModel]()
     let viewModel = ExpensesViewModel()
     init() {
         viewModel.delegate = self
@@ -34,7 +35,11 @@ extension HomeViewModel: dataDelegate {
             guard let records = newData as? [RecordModel] else {
                 return
             }
+            self.records = records
             self.data = processData(records: records)
+        } else if type == .expenses {
+            self.records = []
+            self.data = processData(records: [])
         }
     }
     
@@ -87,6 +92,21 @@ extension HomeViewModel: dataDelegate {
         }
         return (fractions,total)
     }
+    
+    func salaryText() -> String {
+        return "Salary - \(Decimal(salary ?? 0.0))"
+    }
+    
+    func expensesText() -> String {
+        
+        return "Expenses - \(records.reduce(0, { $0 + $1.amount}))"
+    }
+    
+    func balanceText() -> String {
+        let balance = Decimal(self.salary ?? 0.0) - records.reduce(0, { $0 + $1.amount})
+        return "Balance - \(balance)"
+    }
+    
 }
 extension Array where Element: Equatable {
     mutating func remove(elementsToRemove: [Element]) {
