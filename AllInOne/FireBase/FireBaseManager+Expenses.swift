@@ -82,9 +82,13 @@ extension FireBaseManager {
         }
     }
     
-    public func getExpensesList(completion: @escaping (Result<[String: [String:Any]], Error>) -> Void) {
+    public func getExpensesList(
+        id:String? = nil,
+        completion: @escaping (Result<[String: [String:Any]], Error>) -> Void) {
+       
+        let table = id ?? monthTable
         
-        tableRef.child(expensesTable).child(monthTable).observeSingleEvent(of: .value) { (snapshot, error) in
+        tableRef.child(expensesTable).child(table).observeSingleEvent(of: .value) { (snapshot, error) in
             if let error = error {
                 completion(.failure(error as! Error))
             } else if let data = snapshot.value as? [String: Any] {

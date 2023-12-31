@@ -13,7 +13,9 @@ struct HomeView: View {
     @Namespace var animationNamespace
     @State private var pieScale:CGSize = .zero
     @Binding var presentSideMenu: Bool
-    
+    @State private var isFilterVisible = false
+    @State private var dataFromFilterView: String?
+    @State private var filterUpdated = false
     var body: some View {
         VStack{
             HStack{
@@ -25,19 +27,29 @@ struct HomeView: View {
                         .frame(width: 32, height: 32)
                 }
                 Spacer()
-                Text(DataHelper.getMonthYearString())
-                    .font( .title)
+                Text(filterUpdated ? "\(viewModel.id ?? "")" : DataHelper.getMonthYearString())
+                    .font(.title)
                     .foregroundColor(Color(hex: 0xAF52DE))
                     .bold()
                 Spacer()
-                // For filter
-                //                Button{
-                //                    presentSideMenu.toggle()
-                //                } label: {
-                //                    Image("")
-                //                        .resizable()
-                //                        .frame(width: 32, height: 32)
-                //                }
+                Button{
+                    isFilterVisible.toggle()
+                } label: {
+                    Image("filter")
+                        .resizable()
+                        .frame(width: 32, height: 32)
+                }
+                .sheet(isPresented: $isFilterVisible) {
+                    VStack {
+                        filterView(isPresented: $isFilterVisible, onDataReceived: { data in
+                            viewModel.updateDetails(id: data)
+                            filterUpdated.toggle()
+                        })
+                            .presentationDetents([.height(200)]) // here!
+                    }.frame(width: 400, height: 200)
+                    
+                }
+                
             }
             .background(.mint)
             

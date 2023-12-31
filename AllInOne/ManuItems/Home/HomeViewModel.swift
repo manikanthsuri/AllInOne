@@ -14,13 +14,17 @@ class HomeViewModel: ObservableObject {
     @Published var data: [DYPieFraction] = []
     @Published var selectedSlice: DYPieFraction?
     @Published var salary: Double?
+    @Published var id: String?
     var records = [RecordModel]()
     let viewModel = ExpensesViewModel()
     init() {
         viewModel.delegate = self
         viewModel.getSalaryDetails()
     }
-    
+    func updateDetails(id:String) {
+        self.id = id
+        viewModel.getSalaryDetails(id: id)
+    }
 }
 extension HomeViewModel: dataDelegate {
     
@@ -30,7 +34,7 @@ extension HomeViewModel: dataDelegate {
                 return
             }
             self.salary = salary
-            self.viewModel.getExpenseList()
+            self.viewModel.getExpenseList(id: self.id)
         } else if error == nil && type == .expenses{
             guard let records = newData as? [RecordModel] else {
                 return
@@ -38,6 +42,10 @@ extension HomeViewModel: dataDelegate {
             self.records = records
             self.data = processData(records: records)
         } else if type == .expenses {
+            self.records = []
+            self.data = processData(records: [])
+        } else {
+            self.salary = 0.0
             self.records = []
             self.data = processData(records: [])
         }
@@ -111,5 +119,41 @@ extension HomeViewModel: dataDelegate {
 extension Array where Element: Equatable {
     mutating func remove(elementsToRemove: [Element]) {
         self = self.filter { !elementsToRemove.contains($0) }
+    }
+}
+
+struct filterView: View {
+    
+    @State private var selectedMonth = 0
+    @State private var selectedYear = 0
+    @Binding var isPresented: Bool
+    var onDataReceived: (String) -> Void
+    
+    var body: some View {
+        
+        VStack{
+            HStack {
+                Picker("Select an option", selection: $selectedMonth) {
+                    ForEach(months.indices, id: \.self) { index in
+                        Text(months[index]).tag(index)
+                    }
+                }
+                .pickerStyle(MenuPickerStyle())
+                
+                Picker("Select an option", selection: $selectedYear) {
+                    ForEach(years.indices, id: \.self) { index in
+                        Text(years[index]).tag(index)
+                    }
+                }
+                .pickerStyle(MenuPickerStyle())
+            }
+            HStack {
+                Button("Show Data") {
+                    onDataReceived("\(months[selectedMonth])-\(years[selectedYear])")
+                    isPresented.toggle()
+                }
+            }
+        }
+        .padding()
     }
 }

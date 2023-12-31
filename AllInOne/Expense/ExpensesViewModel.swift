@@ -22,9 +22,11 @@ class ExpensesViewModel {
     weak var delegate: dataDelegate?
 
 
-    func getSalaryDetails() {
+    func getSalaryDetails(id: String? = nil) {
         
-        FireBaseManager.shared.getSalaryDetailsList(completion: {[weak self] result in
+        FireBaseManager.shared.getSalaryDetailsList(
+            id:id,
+            completion: {[weak self] result in
             switch result {
             case .success(let data):
                 self?.delegate?.dataDidUpdate(newData: [data], ofType: .salary, error: nil)
@@ -34,9 +36,11 @@ class ExpensesViewModel {
         })
     }
     
-    func getExpenseList() {
+    func getExpenseList(id: String? = nil) {
         
-        FireBaseManager.shared.getExpensesList(completion: { result in
+        FireBaseManager.shared.getExpensesList(
+            id: id,
+            completion: { result in
             switch result {
             case .success(let data):
                 let expenses = data.values.compactMap { entry in

@@ -28,14 +28,17 @@ extension FireBaseManager {
         }
     }
     
-    public func getSalaryDetailsList(completion: @escaping (Result<String, Error>) -> Void) {
+    public func getSalaryDetailsList(
+        id:String? = nil,
+        completion: @escaping (Result<String, Error>) -> Void) {
         
         tableRef.child(salaryTable).observeSingleEvent(of: .value) { (snapshot, error) in
             
             if let error = error {
                 completion(.failure(error as! Error))
             } else {
-                let uniqueKey = DataHelper.getMonthYearString()
+                let uniqueKey = id ?? DataHelper.getMonthYearString()
+
                 if let data = snapshot.value as? [String: Any] {
                     guard let dataValues = data[uniqueKey] as? [String : [String:Any]] else {
                         completion(.failure(DataError.notFoundError))

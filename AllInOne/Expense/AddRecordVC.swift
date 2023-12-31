@@ -296,6 +296,12 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField == amountTF {
+            textField.keyboardType = .decimalPad
+        }
+        return true
+    }
     // Called just before the text field becomes active
     func textFieldDidBeginEditing(_ textField: UITextField) {
         // Perform actions when the text field becomes active
