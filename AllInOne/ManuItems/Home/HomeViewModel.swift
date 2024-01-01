@@ -122,38 +122,3 @@ extension Array where Element: Equatable {
     }
 }
 
-struct filterView: View {
-    
-    @State private var selectedMonth = 0
-    @State private var selectedYear = 0
-    @Binding var isPresented: Bool
-    var onDataReceived: (String) -> Void
-    
-    var body: some View {
-        
-        VStack{
-            HStack {
-                Picker("Select an option", selection: $selectedMonth) {
-                    ForEach(months.indices, id: \.self) { index in
-                        Text(months[index]).tag(index)
-                    }
-                }
-                .pickerStyle(MenuPickerStyle())
-                
-                Picker("Select an option", selection: $selectedYear) {
-                    ForEach(years.indices, id: \.self) { index in
-                        Text(years[index]).tag(index)
-                    }
-                }
-                .pickerStyle(MenuPickerStyle())
-            }
-            HStack {
-                Button("Show Data") {
-                    onDataReceived("\(months[selectedMonth])-\(years[selectedYear])")
-                    isPresented.toggle()
-                }
-            }
-        }
-        .padding()
-    }
-}

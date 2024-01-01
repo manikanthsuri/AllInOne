@@ -80,6 +80,7 @@
 		F15A61602B3EC64500D4FDE0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15A615F2B3EC64500D4FDE0 /* Launch Screen.storyboard */; };
 		F15A61642B3F1F7A00D4FDE0 /* FireBaseManager+Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15A61632B3F1F7A00D4FDE0 /* FireBaseManager+Configs.swift */; };
 		F15A61662B3F314400D4FDE0 /* AddRecordVC+autoAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15A61652B3F314400D4FDE0 /* AddRecordVC+autoAdd.swift */; };
+		F15A618F2B42591C00D4FDE0 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15A618E2B42591C00D4FDE0 /* FilterView.swift */; };
 		F18EAB6F2B2D85A20017E83E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18EAB6E2B2D85A20017E83E /* Protocols.swift */; };
 		F18EAB722B2DB5D50017E83E /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18EAB702B2DB5D40017E83E /* ReminderView.swift */; };
 		F18EAB732B2DB5D50017E83E /* AgeDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18EAB712B2DB5D50017E83E /* AgeDiff.swift */; };
@@ -160,6 +161,7 @@
 		F15A615F2B3EC64500D4FDE0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F15A61632B3F1F7A00D4FDE0 /* FireBaseManager+Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FireBaseManager+Configs.swift"; sourceTree = "<group>"; };
 		F15A61652B3F314400D4FDE0 /* AddRecordVC+autoAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddRecordVC+autoAdd.swift"; sourceTree = "<group>"; };
+		F15A618E2B42591C00D4FDE0 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		F18EAB6E2B2D85A20017E83E /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		F18EAB702B2DB5D40017E83E /* ReminderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		F18EAB712B2DB5D50017E83E /* AgeDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeDiff.swift; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				A146B6E02B271D5900A3650E /* HomeView.swift */,
+				F15A618E2B42591C00D4FDE0 /* FilterView.swift */,
 				F1D41E862B3A680700E36952 /* HomeViewModel.swift */,
 			);
 			path = Home;
@@ -674,6 +677,7 @@
 				A166B9342B27E3E0001D1CC6 /* UIHelper.swift in Sources */,
 				A146B6C72B271AF400A3650E /* AllInOne_SwiftUIApp.swift in Sources */,
 				A166B92B2B27E38B001D1CC6 /* AddRecordVC.swift in Sources */,
+				F15A618F2B42591C00D4FDE0 /* FilterView.swift in Sources */,
 				A14430BE2B294E7100589270 /* iActivityIndicator.swift in Sources */,
 				F1A50DA92B34B0EA00D5C43B /* PlotAreaChart.swift in Sources */,
 				F1A50D972B34B0EA00D5C43B /* Shadow.swift in Sources */,

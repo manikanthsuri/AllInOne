@@ -39,6 +39,7 @@ struct HomeView: View {
                         .resizable()
                         .frame(width: 32, height: 32)
                 }
+                .padding()
                 .sheet(isPresented: $isFilterVisible) {
                     VStack {
                         filterView(isPresented: $isFilterVisible, onDataReceived: { data in
@@ -55,7 +56,7 @@ struct HomeView: View {
             
             GeometryReader { proxy in
                 Group {
-                    ZStack(alignment: Alignment.top) {
+                    ZStack(alignment: Alignment.topLeading) {
                         if proxy.size.height > proxy.size.width {
                             VStack {
                                 self.content()
@@ -78,7 +79,13 @@ struct HomeView: View {
                     }
                 }
             }
-        }
+        }.background(
+            LinearGradient(
+                gradient: Gradient(
+                    colors: [Color.white.opacity(0.9),Color.mint.opacity(0.5)]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing)
+        )
     }
     func content()->some View {
         Group {
