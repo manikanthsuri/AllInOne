@@ -102,9 +102,10 @@ struct HomeView: View {
                 Text(viewModel.salaryText()).font(.headline).bold()
                 Text(viewModel.expensesText()).font(.headline).bold()
                 Text(viewModel.balanceText()).font(.headline).bold()
+                Text(viewModel.paidUnPaidText()).font(.headline).bold()
             }
             .padding()
-            .frame(width: 200,height: 100)
+            .frame(width: 300,height: 120)
             .background(
                 LinearGradient(
                     gradient: Gradient(

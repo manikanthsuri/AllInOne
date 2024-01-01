@@ -374,7 +374,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sg9-tm-KKX">
                                                                 <rect key="frame" x="5" y="0.0" width="368" height="35"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="nTO-DU-e8B" id="NFV-Rr-zvP"/>
                                                                 </connections>
@@ -525,7 +525,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="39f-vD-7YU">
                                                                 <rect key="frame" x="5" y="0.0" width="368" height="35"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="nTO-DU-e8B" id="tWS-WO-sBM"/>
                                                                 </connections>

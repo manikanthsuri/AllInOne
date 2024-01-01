@@ -21,18 +21,24 @@ final class DataHelper {
     static func getCurrentDateString() -> String {
         let currentDate = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MMM-yyyy HH:mm:ss"
+        dateFormatter.dateFormat = "dd-MMM-yyyy HH:mm"
         let dateString = dateFormatter.string(from: currentDate)
         return dateString
     }
     
-    static func getCurrentMonthString() -> String {
-        let currentDate = Date()
-
-        let calendar = Calendar.current
-
-        let currentMonth = calendar.component(.month, from: currentDate)
+    static func getCurrentDayString() -> String {
        
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let dayComponent = calendar.component(.day, from: currentDate)
+        return "\(dayComponent)"
+    }
+    
+    static func getCurrentMonthString() -> String {
+        
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let currentMonth = calendar.component(.month, from: currentDate)
         let dateFormatter = DateFormatter()
         let monthName = dateFormatter.monthSymbols[currentMonth - 1]
         
@@ -40,13 +46,12 @@ final class DataHelper {
     }
     
    static func getCurrentYearString() -> String {
-        let currentDate = Date()
-
-        let calendar = Calendar.current
-
-        let currentYear = calendar.component(.year, from: currentDate)
-        
-        return "\(currentYear)"
+       
+       let currentDate = Date()
+       let calendar = Calendar.current
+       let currentYear = calendar.component(.year, from: currentDate)
+    
+       return "\(currentYear)"
     }
     
    static func generate8DigitRandomNumber() -> String {

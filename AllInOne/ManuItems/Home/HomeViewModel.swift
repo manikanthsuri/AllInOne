@@ -40,7 +40,15 @@ extension HomeViewModel: dataDelegate {
                 return
             }
             self.records = records
-            self.data = processData(records: records)
+            
+            let filteredRecords = self.records.filter { record in
+                if bankAccounts.contains(record.toAccount){
+                    return true
+                }
+                return false
+            }
+            self.records.remove(elementsToRemove: filteredRecords)
+            self.data = processData(records: self.records)
         } else if type == .expenses {
             self.records = []
             self.data = processData(records: [])
@@ -54,7 +62,7 @@ extension HomeViewModel: dataDelegate {
     public func processData(records: [RecordModel])->[DYPieFraction] {
         var fractions : [DYPieFraction] = []
         var recodeArray = records
-        
+       
         for item in recodeArray {
             let duplicateItems = recodeArray.filter{$0.toAccount == item.toAccount}
             if duplicateItems.count > 1 {
@@ -77,7 +85,7 @@ extension HomeViewModel: dataDelegate {
                 record: item)
             fractions.append(fracrion)
         }
-        let balance = Decimal(self.salary ?? 0.0) - records.reduce(0, { $0 + $1.amount})
+        let balance = Decimal(self.salary ?? 0.0) - recodeArray.reduce(0, { $0 + $1.amount})
         let fracrion = DYPieFraction(
             value:  (balance as NSDecimalNumber).doubleValue,
             color: colorMapper["BALANCE"] ?? Color.random(),
@@ -115,6 +123,11 @@ extension HomeViewModel: dataDelegate {
         return "Balance - \(balance)"
     }
     
+    func paidUnPaidText() -> String {
+        let paidRecords = records.filter{$0.sent == true}.reduce(0, { $0 + $1.amount})
+        let unpaidrecords = records.filter{$0.sent == false}.reduce(0, { $0 + $1.amount})
+        return "Paid / Unpaid - \(paidRecords) / \(unpaidrecords)"
+    }
 }
 extension Array where Element: Equatable {
     mutating func remove(elementsToRemove: [Element]) {

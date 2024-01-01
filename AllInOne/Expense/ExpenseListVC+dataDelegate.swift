@@ -62,7 +62,10 @@ extension ExpenseListVC: dataDelegate {
                 guard let records = newData as? [RecordModel] else {
                     return
                 }
-                expenses = records
+                let sortedRecords = records.sorted { record1, record2 in
+                    return record1.createdOn ?? "" < record2.createdOn ?? ""
+                }
+                expenses = sortedRecords
                 expenseListTblView.reloadData()
             }
         }

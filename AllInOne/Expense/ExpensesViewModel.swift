@@ -43,7 +43,7 @@ class ExpensesViewModel {
             completion: { result in
             switch result {
             case .success(let data):
-                let expenses = data.values.compactMap { entry in
+                var expenses = data.values.compactMap { entry in
                     do {
                         if let hexString = entry["data"] as? String,
                            let dictString = FireBaseManager.shared.hexToString(hexString),

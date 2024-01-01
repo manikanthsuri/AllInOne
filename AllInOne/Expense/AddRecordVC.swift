@@ -79,11 +79,11 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
                                         forTFView])
         
         if isfromEdit {
-            setValues()
             titleLbl.text = "Update Expense"
         } else {
             titleLbl.text = "Add Expense"
         }
+        setValues()
         if showAutoAdd {
             autoAddBtn.isHidden = false
         }
@@ -181,18 +181,24 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
     }
     
     func setValues(){
-        
-        guard let record = selectedRecord else {
-            return
+        if isfromEdit {
+            guard let record = selectedRecord else {
+                return
+            }
+            amountTF.text = "\(record.amount)"
+            fromAccountTF.text = record.fromAccount
+            toAccountTF.text = record.toAccount
+            forTF.text = record.reason
+            dateTF.text = record.date
+            monthTF.text = record.month
+            yearTF.text = record.year
+            sentTF.text = "\(record.sent)"
+        } else {
+            dateTF.text = DataHelper.getCurrentDayString()
+            monthTF.text = DataHelper.getCurrentMonthString()
+            yearTF.text = DataHelper.getCurrentYearString()
         }
-        amountTF.text = "\(record.amount)"
-        fromAccountTF.text = record.fromAccount
-        toAccountTF.text = record.toAccount
-        forTF.text = record.reason
-        dateTF.text = record.date
-        monthTF.text = record.month
-        yearTF.text = record.year
-        sentTF.text = "\(record.sent)"
+       
     }
     @IBAction func autoAddBtnAction(_ sender: Any) {
         fetchDataFromJson()
@@ -298,7 +304,7 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
     }
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == amountTF {
-            textField.keyboardType = .decimalPad
+            textField.keyboardType = .numberPad
         }
         return true
     }
