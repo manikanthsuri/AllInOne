@@ -37,7 +37,7 @@ struct HomeView: View {
                 } label: {
                     Image("filter")
                         .resizable()
-                        .frame(width: 32, height: 32)
+                        .frame(width: 40, height: 40)
                 }
                 .padding()
                 .sheet(isPresented: $isFilterVisible) {

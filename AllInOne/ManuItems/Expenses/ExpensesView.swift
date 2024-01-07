@@ -17,7 +17,7 @@ struct ExpensesView: View {
                     presentSideMenu.toggle()
                 }) {
                     Image("menu").resizable()
-                        .frame(width: 50, height: 40)
+                        .frame(width: 32, height: 32)
                         .background(Color(UIColor(hex: "00C7BE")))
                       
                 }

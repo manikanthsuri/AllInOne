@@ -34,6 +34,14 @@ class ExpenseListVC: UIViewController {
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var cancelBtn: UIButton!
 
+    
+    @IBOutlet weak var filterView: UIView!
+    @IBOutlet weak var filterTitleLabel: UILabel!
+    @IBOutlet weak var filterCollectionView: UICollectionView!
+    @IBOutlet weak var filterSaveBtn: UIButton!
+    @IBOutlet weak var filterCancelBtn: UIButton!
+    var selectedFilterDict = [String: [String]]()
+    
     var expenses = [RecordModel]()
     var salary = [SalayModel]()
     let viewModel = ExpensesViewModel()
