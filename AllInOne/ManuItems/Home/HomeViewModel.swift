@@ -85,7 +85,7 @@ extension HomeViewModel: dataDelegate {
                 record: item)
             fractions.append(fracrion)
         }
-        let balance = Decimal(self.salary ?? 0.0) - recodeArray.reduce(0, { $0 + $1.amount})
+        let balance = Decimal(self.salary ?? 0.0) - records.reduce(0, { $0 + $1.amount})
         let fracrion = DYPieFraction(
             value:  (balance as NSDecimalNumber).doubleValue,
             color: colorMapper["BALANCE"] ?? Color.random(),

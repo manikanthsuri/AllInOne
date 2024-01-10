@@ -22,6 +22,8 @@ var fromAccounts = ["BAJAJ FINSERV", "HDFC BANK", "HDFC CREDIT CARD", "ICICI BAN
 var toAccounts = ["BAJAJ FINSERV", "DMART", "FATHER", "FUEL", "HDFC BANK", "HDFC CREDIT CARD", "ICICI BANK", "ICICI CREDIT CARD", "JIO MART", "LIC", "MILK", "PPF", "POST OFFICE", "RENT", "RESTAURANT", "SHANNU RD", "SBI", "STORE", "UNION BANK", "VEGITABLES"]
 var bankAccounts = ["HDFC BANK","ICICI BANK","SBI","UNION BANK"]
 var showAutoAdd = false
+var allowSentItemDelete = false
+var allowSentItemEdit = false
 var sampleRecords = [[String:Any]]()
 let colorMapper: [String: Color] = [
     

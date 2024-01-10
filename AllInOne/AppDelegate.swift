@@ -41,6 +41,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     sampleRecords = sampleRecord
                 }
                 
+                if let allowEdit = data["allowSentItemEdit"] as? Bool {
+                    allowSentItemEdit = allowEdit
+                }
+                
+                if let allowDelete = data["allowSentItemDelete"] as? Bool {
+                    allowSentItemDelete = allowDelete
+                }
+                
+                if let bankAccountString = data["bankAccounts"] as? String {
+                    bankAccounts = bankAccountString.components(separatedBy: ",")
+                }
+                
             case .failure(let error):
                 print(error)
             }
