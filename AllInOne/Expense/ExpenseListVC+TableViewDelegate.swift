@@ -8,10 +8,14 @@
 import Foundation
 import UIKit
 
-extension ExpenseListVC: UITableViewDataSource {
+extension ExpenseListVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.expenses.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 135
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -78,6 +82,7 @@ extension ExpenseListVC: UITableViewDataSource {
             return UISwipeActionsConfiguration(actions: [])
         }
     }
+    
     func editRecord(record: RecordModel) {
         if let addRecordVC = storyboard!.instantiateViewController(withIdentifier: "AddRecordVC") as? AddRecordVC {
             addRecordVC.isfromEdit = true

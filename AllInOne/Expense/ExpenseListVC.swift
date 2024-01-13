@@ -8,7 +8,7 @@
 import UIKit
 
 class ExpenseListVC: UIViewController {
-
+    
     @IBOutlet weak var expenseListTblView: UITableView!
     
     @IBOutlet weak var salaryPopupView: UIView!
@@ -33,19 +33,16 @@ class ExpenseListVC: UIViewController {
     
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var cancelBtn: UIButton!
-
     
-    @IBOutlet weak var filterView: UIView!
-    @IBOutlet weak var filterTitleLabel: UILabel!
-    @IBOutlet weak var filterCollectionView: UICollectionView!
-    @IBOutlet weak var filterSaveBtn: UIButton!
-    @IBOutlet weak var filterCancelBtn: UIButton!
-    var selectedFilterDict = [String: [String]]()
+    @IBOutlet weak var lbl1: UILabel!
+    @IBOutlet weak var lbl2: UILabel!
+    @IBOutlet weak var lbl3: UILabel!
+    @IBOutlet weak var lbl4: UILabel!
     
     var expenses = [RecordModel]()
     var salary = [SalayModel]()
     let viewModel = ExpensesViewModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Loadder.shared.showLoader(view: view)
@@ -53,20 +50,16 @@ class ExpenseListVC: UIViewController {
         expenseListTblView.register(UINib(nibName: "ExpenseCell", bundle: nil), forCellReuseIdentifier: "ExpenseCell")
         viewModel.getSalaryDetails()
         NotificationCenter.default.addObserver(self, selector: #selector(dataAdded), name: .dataNotification, object: nil)
-    
     }
 }
-extension ExpenseListVC: UITableViewDelegate, dataAddUpdateProtocol {
-   
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 135
-    }
+extension ExpenseListVC: dataAddUpdateProtocol {
     
     func dataAdded() {
         self.viewModel.getExpenseList()
     }
-
+    
 }
+
 extension ExpenseListVC {
     
     func getImagesForTransaction(record: RecordModel) -> [UIImage] {

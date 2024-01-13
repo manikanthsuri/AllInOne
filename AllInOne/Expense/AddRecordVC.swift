@@ -51,12 +51,17 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var sentBtn: UIButton!
     
     @IBOutlet weak var submitBtn: UIButton!
-    
     @IBOutlet weak var autoAddBtn: UIButton!
+    
+    @IBOutlet weak var optionsView: UIView!
+    @IBOutlet weak var optionsCollectionView: UICollectionView!
+    @IBOutlet weak var optionsViewHeightConstant: NSLayoutConstraint!
     
     var isfromEdit = false
     var selectedRecord: RecordModel? = nil
     var addUpdateDelegate: dataAddUpdateProtocol?
+    
+    var selectedFiled = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +92,14 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
         if showAutoAdd {
             autoAddBtn.isHidden = false
         }
+        configOptions()
+    }
+    func configOptions() {
+        optionsCollectionView.register(UINib(nibName: FilterCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: FilterCollectionViewCell.reuseIdentifier)
         
+        optionsView.layer.borderWidth = 2.0
+        optionsView.layer.borderColor = UIColor.systemMint.cgColor
+        optionsView.layer.cornerRadius = 5.0
     }
     @IBAction func fromAccountBtnAction(_ sender: Any) {
         let params = Parameters(
@@ -105,34 +117,18 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
         }
     }
     @IBAction func toAccountBtnAction(_ sender: Any) {
-        let params = Parameters(
-            message: "Select to which account you want transfer",
-            cancelButton: "Cancel",
-            otherButtons: toAccounts
-        )
-        AlertHelperKit().showAlertWithHandler(self, parameters: params) { buttonIndex in
-            switch buttonIndex {
-            case 0:
-                return
-            default:
-                self.toAccountTF.text = toAccounts[buttonIndex - 1]
-            }
-        }
+        
+        selectedFiled = "To Account"
+        optionsView.isHidden = false
+        optionsCollectionView.reloadData()
+        optionsViewHeightConstant.constant = 450
     }
     @IBAction func dateBtnAction(_ sender: Any) {
-        let params = Parameters(
-            message: "Select Date",
-            cancelButton: "Cancel",
-            otherButtons: dates
-        )
-        AlertHelperKit().showAlertWithHandler(self, parameters: params) { buttonIndex in
-            switch buttonIndex {
-            case 0:
-                return
-            default:
-                self.dateTF.text = dates[buttonIndex - 1]
-            }
-        }
+        
+        selectedFiled = "Date"
+        optionsView.isHidden = false
+        optionsCollectionView.reloadData()
+        optionsViewHeightConstant.constant = 320
     }
     @IBAction func monthBtnAction(_ sender: Any) {
         let params = Parameters(
@@ -286,7 +282,12 @@ class AddRecordVC: UIViewController, UITextFieldDelegate {
         sentTF.text = ""
     }
     @IBAction func closeButtonAction(_ sender: UIButton) {
-        dismiss(animated: true)
+        if sender.tag == 1 {
+            optionsView.isHidden = true
+        } else {
+            dismiss(animated: true)
+        }
+        
     }
     //UITextField Delegate
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

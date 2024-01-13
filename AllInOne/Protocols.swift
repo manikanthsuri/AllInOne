@@ -12,4 +12,6 @@ import Foundation
     @objc optional func dataUpdated()
 }
 
-//https://www.appcoda.com/swiftui-chart-ios17/
+@objc protocol filterProtocol {
+    func filter(with filterDict:[String: [String]])
+}

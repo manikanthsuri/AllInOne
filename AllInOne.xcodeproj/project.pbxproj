@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A108240B2B5122F000C8C4C1 /* AddRecordVC+collectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108240A2B5122F000C8C4C1 /* AddRecordVC+collectionViewDelegate.swift */; };
 		A142AD2A2B4408C50037FACB /* ExpenseListVC+FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142AD292B4408C50037FACB /* ExpenseListVC+FilterView.swift */; };
 		A142ADA82B4A6E0F0037FACB /* FilterCollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A142ADA42B4A6E0F0037FACB /* FilterCollectionViewHeader.xib */; };
 		A142ADA92B4A6E0F0037FACB /* FilterCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142ADA52B4A6E0F0037FACB /* FilterCollectionViewHeader.swift */; };
 		A142ADAA2B4A6E0F0037FACB /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142ADA62B4A6E0F0037FACB /* FilterCollectionViewCell.swift */; };
 		A142ADAB2B4A6E0F0037FACB /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A142ADA72B4A6E0F0037FACB /* FilterCollectionViewCell.xib */; };
-		A142ADAD2B4A6E890037FACB /* ExpenseListVC+CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142ADAC2B4A6E890037FACB /* ExpenseListVC+CollectionViewDelegate.swift */; };
+		A142ADAD2B4A6E890037FACB /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142ADAC2B4A6E890037FACB /* FilterVC.swift */; };
 		A14430BA2B294E7100589270 /* iActivityIndicatorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14430B52B294E7000589270 /* iActivityIndicatorStyle.swift */; };
 		A14430BB2B294E7100589270 /* RowOfShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14430B62B294E7000589270 /* RowOfShapes.swift */; };
 		A14430BC2B294E7100589270 /* StyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14430B72B294E7000589270 /* StyleModifier.swift */; };
@@ -124,12 +125,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A108240A2B5122F000C8C4C1 /* AddRecordVC+collectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddRecordVC+collectionViewDelegate.swift"; sourceTree = "<group>"; };
 		A142AD292B4408C50037FACB /* ExpenseListVC+FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpenseListVC+FilterView.swift"; sourceTree = "<group>"; };
 		A142ADA42B4A6E0F0037FACB /* FilterCollectionViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCollectionViewHeader.xib; sourceTree = "<group>"; };
 		A142ADA52B4A6E0F0037FACB /* FilterCollectionViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewHeader.swift; sourceTree = "<group>"; };
 		A142ADA62B4A6E0F0037FACB /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		A142ADA72B4A6E0F0037FACB /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
-		A142ADAC2B4A6E890037FACB /* ExpenseListVC+CollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpenseListVC+CollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		A142ADAC2B4A6E890037FACB /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		A14430B52B294E7000589270 /* iActivityIndicatorStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iActivityIndicatorStyle.swift; sourceTree = "<group>"; };
 		A14430B62B294E7000589270 /* RowOfShapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowOfShapes.swift; sourceTree = "<group>"; };
 		A14430B72B294E7000589270 /* StyleModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleModifier.swift; sourceTree = "<group>"; };
@@ -397,7 +399,7 @@
 				A1EAC1EB2B28915100F7DC2F /* Expense.storyboard */,
 				A166B9202B27E38B001D1CC6 /* ExpenseListVC.swift */,
 				F1D41E822B3A5F8800E36952 /* ExpenseListVC+TableViewDelegate.swift */,
-				A142ADAC2B4A6E890037FACB /* ExpenseListVC+CollectionViewDelegate.swift */,
+				A142ADAC2B4A6E890037FACB /* FilterVC.swift */,
 				F1D41E842B3A5FC900E36952 /* ExpenseListVC+DataDelegate.swift */,
 				A142AD292B4408C50037FACB /* ExpenseListVC+FilterView.swift */,
 				F1A50D702B34AEEA00D5C43B /* ExpensesViewModel.swift */,
@@ -407,6 +409,7 @@
 				A166B9232B27E38B001D1CC6 /* RecordModel.swift */,
 				A1A68C0F2B29C75100C9EE2C /* SalayModel.swift */,
 				A166B9242B27E38B001D1CC6 /* AddRecordVC.swift */,
+				A108240A2B5122F000C8C4C1 /* AddRecordVC+collectionViewDelegate.swift */,
 				F15A61652B3F314400D4FDE0 /* AddRecordVC+autoAdd.swift */,
 			);
 			path = Expense;
@@ -666,6 +669,7 @@
 				A1A68C0C2B29BBCA00C9EE2C /* DataHelper+Hex.swift in Sources */,
 				A166B92A2B27E38B001D1CC6 /* RecordModel.swift in Sources */,
 				F1A50D992B34B0EA00D5C43B /* DYPieFraction.swift in Sources */,
+				A108240B2B5122F000C8C4C1 /* AddRecordVC+collectionViewDelegate.swift in Sources */,
 				A166B9292B27E38B001D1CC6 /* ExpenseCell.swift in Sources */,
 				F1A50DA42B34B0EA00D5C43B /* OrientationObserver.swift in Sources */,
 				F1A50D9B2B34B0EA00D5C43B /* DYBarDataSet.swift in Sources */,
@@ -674,7 +678,7 @@
 				F1A50D712B34AEEA00D5C43B /* ExpensesViewModel.swift in Sources */,
 				F1A50DA62B34B0EA00D5C43B /* DYFractionChartInfoView.swift in Sources */,
 				A1A68C0A2B29BB3400C9EE2C /* DataHelper.swift in Sources */,
-				A142ADAD2B4A6E890037FACB /* ExpenseListVC+CollectionViewDelegate.swift in Sources */,
+				A142ADAD2B4A6E890037FACB /* FilterVC.swift in Sources */,
 				A1EAC1EE2B28949000F7DC2F /* AppDelegate.swift in Sources */,
 				F1A50D9A2B34B0EA00D5C43B /* MarkerLine.swift in Sources */,
 				A1A68C102B29C75100C9EE2C /* SalayModel.swift in Sources */,

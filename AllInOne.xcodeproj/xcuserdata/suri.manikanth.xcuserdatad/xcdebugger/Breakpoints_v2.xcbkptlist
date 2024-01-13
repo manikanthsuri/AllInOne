@@ -40,7 +40,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "02E3BFFE-B6B0-449E-B98D-3FA6623743BA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AllInOne/FireBase/FireBaseManager+Expenses.swift"
@@ -48,7 +48,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
-            landmarkName = "getExpensesList(completion:)"
+            landmarkName = "getExpensesList(id:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -80,6 +80,180 @@
                   startingLineNumber = "93"
                   endingLineNumber = "93"
                   offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "02E3BFFE-B6B0-449E-B98D-3FA6623743BA - 94a8c2dba0f2d046"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AllInOne.FireBaseManager.getExpensesList(id: Swift.Optional&lt;Swift.String&gt;, completion: (Swift.Result&lt;Swift.Dictionary&lt;Swift.String, Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AllInOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/Sample/AllInOne/AllInOne/FireBase/FireBaseManager+Expenses.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "02E3BFFE-B6B0-449E-B98D-3FA6623743BA - 93da9267e7d62a42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot, Swift.Optional&lt;Swift.String&gt;) -&gt; () in AllInOne.FireBaseManager.getExpensesList(id: Swift.Optional&lt;Swift.String&gt;, completion: (Swift.Result&lt;Swift.Dictionary&lt;Swift.String, Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AllInOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/Sample/AllInOne/AllInOne/FireBase/FireBaseManager+Expenses.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6881D161-D8E1-41D2-A2A0-5BB48219D1D7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllInOne/Expense/AddRecordVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "dateBtnAction(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6881D161-D8E1-41D2-A2A0-5BB48219D1D7 - 9e6b29f94be78ffe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AllInOne.AddRecordVC.dateBtnAction(Any) -&gt; ()"
+                  moduleName = "AllInOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/Sample/AllInOne/AllInOne/Expense/AddRecordVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "6881D161-D8E1-41D2-A2A0-5BB48219D1D7 - 9e6b29f94be78ffe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AllInOne.AddRecordVC.dateBtnAction(Any) -&gt; ()"
+                  moduleName = "AllInOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/Sample/AllInOne/AllInOne/Expense/AddRecordVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0E7DAAA8-0C84-4ECF-BFC2-F5481794A450"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllInOne/Expense/ExpenseListVC+DataDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "dataDidUpdate(newData:ofType:error:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0E7DAAA8-0C84-4ECF-BFC2-F5481794A450 - ced26cc28f1ec978"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AllInOne.ExpenseListVC.dataDidUpdate(newData: Swift.Array&lt;Any&gt;, ofType: AllInOne.fetchDataType, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "AllInOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/Sample/AllInOne/AllInOne/Expense/ExpenseListVC+DataDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "0E7DAAA8-0C84-4ECF-BFC2-F5481794A450 - ced26cc28f1ec978"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AllInOne.ExpenseListVC.dataDidUpdate(newData: Swift.Array&lt;Any&gt;, ofType: AllInOne.fetchDataType, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "AllInOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/Sample/AllInOne/AllInOne/Expense/ExpenseListVC+DataDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "07E4593E-1D1D-489E-854B-BE6665D952F7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AllInOne/Expense/ExpenseListVC+DataDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "dataDidUpdate(newData:ofType:error:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "07E4593E-1D1D-489E-854B-BE6665D952F7 - ced26cc28f1ed38a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AllInOne.ExpenseListVC.dataDidUpdate(newData: Swift.Array&lt;Any&gt;, ofType: AllInOne.fetchDataType, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "AllInOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/Sample/AllInOne/AllInOne/Expense/ExpenseListVC+DataDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "2888">
+               </Location>
+               <Location
+                  uuid = "07E4593E-1D1D-489E-854B-BE6665D952F7 - ced26cc28f1ed38a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AllInOne.ExpenseListVC.dataDidUpdate(newData: Swift.Array&lt;Any&gt;, ofType: AllInOne.fetchDataType, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "AllInOne"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suri.manikanth/Desktop/Projects/Sample/AllInOne/AllInOne/Expense/ExpenseListVC+DataDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "2916">
                </Location>
             </Locations>
          </BreakpointContent>
