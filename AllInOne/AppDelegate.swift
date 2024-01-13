@@ -37,10 +37,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if let autoadd = data["showAutoAdd"] as? Bool {
                     showAutoAdd = autoadd
                 }
+                
                 if let sampleRecord = data["sampleRecords"] as? [[String:Any]] {
                     sampleRecords = sampleRecord
                 }
                 
+                if let sampleSections = data["filterSections"] as? String {
+                    filterSections = sampleSections.components(separatedBy: ",")
+                }
+              
                 if let allowEdit = data["allowSentItemEdit"] as? Bool {
                     allowSentItemEdit = allowEdit
                 }

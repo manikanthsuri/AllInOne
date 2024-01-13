@@ -21,6 +21,7 @@ let bools = ["True","False"]
 var fromAccounts = ["BAJAJ FINSERV", "HDFC BANK", "HDFC CREDIT CARD", "ICICI BANK", "ICICI CREDIT CARD", "SBI", "UNION BANK"]
 var toAccounts = ["BAJAJ FINSERV", "DMART", "FATHER", "FUEL", "HDFC BANK", "HDFC CREDIT CARD", "ICICI BANK", "ICICI CREDIT CARD", "JIO MART", "LIC", "MILK", "PPF", "POST OFFICE", "RENT", "RESTAURANT", "SHANNU RD", "SBI", "STORE", "UNION BANK", "VEGITABLES"]
 var bankAccounts = ["HDFC BANK","ICICI BANK","SBI","UNION BANK"]
+var filterSections = ["From Account", "To Account", "Transaction Status", "Date", "Month", "Year"]
 var showAutoAdd = false
 var allowSentItemDelete = false
 var allowSentItemEdit = false

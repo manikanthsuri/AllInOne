@@ -20,7 +20,7 @@ import Foundation
 class ExpensesViewModel {
     
     weak var delegate: dataDelegate?
-
+    var salary: String?
 
     func getSalaryDetails(id: String? = nil) {
         
@@ -29,6 +29,7 @@ class ExpensesViewModel {
             completion: {[weak self] result in
             switch result {
             case .success(let data):
+                self?.salary = data
                 self?.delegate?.dataDidUpdate(newData: [data], ofType: .salary, error: nil)
             case .failure(let error):
                 self?.delegate?.dataDidUpdate(newData: [], ofType: .salary, error: error)
@@ -43,7 +44,7 @@ class ExpensesViewModel {
             completion: { result in
             switch result {
             case .success(let data):
-                var expenses = data.values.compactMap { entry in
+                let expenses = data.values.compactMap { entry in
                     do {
                         if let hexString = entry["data"] as? String,
                            let dictString = FireBaseManager.shared.hexToString(hexString),

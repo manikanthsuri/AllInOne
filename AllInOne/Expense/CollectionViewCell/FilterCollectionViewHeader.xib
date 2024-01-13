@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCollectionViewHeader" id="U6b-Vx-4bR" customClass="FilterCollectionViewHeader" customModule="AllInOne" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6jv-s6-UKX">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVW-hi-cye">
+                            <rect key="frame" x="10" y="5" width="300" height="40"/>
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <constraints>
+                        <constraint firstItem="EVW-hi-cye" firstAttribute="leading" secondItem="6jv-s6-UKX" secondAttribute="leading" constant="10" id="Eb1-4M-a9U"/>
+                        <constraint firstAttribute="bottom" secondItem="EVW-hi-cye" secondAttribute="bottom" constant="5" id="LQo-gz-jzH"/>
+                        <constraint firstAttribute="trailing" secondItem="EVW-hi-cye" secondAttribute="trailing" constant="10" id="MfY-14-l1j"/>
+                        <constraint firstItem="EVW-hi-cye" firstAttribute="top" secondItem="6jv-s6-UKX" secondAttribute="top" constant="5" id="vsH-lP-bGt"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="6jv-s6-UKX" secondAttribute="bottom" id="I46-E9-qwG"/>
+                <constraint firstItem="6jv-s6-UKX" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="SnE-Cz-K5f"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="6jv-s6-UKX" secondAttribute="trailing" id="ayL-yO-8hK"/>
+                <constraint firstItem="6jv-s6-UKX" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="xPS-DS-VIS"/>
+            </constraints>
+            <connections>
+                <outlet property="headerView" destination="6jv-s6-UKX" id="RgV-98-cv1"/>
+                <outlet property="titleLabel" destination="EVW-hi-cye" id="7ex-wW-lGz"/>
+            </connections>
+            <point key="canvasLocation" x="69" y="20"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A108240B2B5122F000C8C4C1 /* AddRecordVC+collectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108240A2B5122F000C8C4C1 /* AddRecordVC+collectionViewDelegate.swift */; };
+		A142AD2A2B4408C50037FACB /* ExpenseListVC+FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142AD292B4408C50037FACB /* ExpenseListVC+FilterView.swift */; };
+		A142ADA82B4A6E0F0037FACB /* FilterCollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A142ADA42B4A6E0F0037FACB /* FilterCollectionViewHeader.xib */; };
+		A142ADA92B4A6E0F0037FACB /* FilterCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142ADA52B4A6E0F0037FACB /* FilterCollectionViewHeader.swift */; };
+		A142ADAA2B4A6E0F0037FACB /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142ADA62B4A6E0F0037FACB /* FilterCollectionViewCell.swift */; };
+		A142ADAB2B4A6E0F0037FACB /* FilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A142ADA72B4A6E0F0037FACB /* FilterCollectionViewCell.xib */; };
+		A142ADAD2B4A6E890037FACB /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142ADAC2B4A6E890037FACB /* FilterVC.swift */; };
 		A14430BA2B294E7100589270 /* iActivityIndicatorStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14430B52B294E7000589270 /* iActivityIndicatorStyle.swift */; };
 		A14430BB2B294E7100589270 /* RowOfShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14430B62B294E7000589270 /* RowOfShapes.swift */; };
 		A14430BC2B294E7100589270 /* StyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14430B72B294E7000589270 /* StyleModifier.swift */; };
@@ -113,11 +120,18 @@
 		F1A50DAD2B34B0EA00D5C43B /* DYGridChartHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D922B34B0EA00D5C43B /* DYGridChartHeaderView.swift */; };
 		F1A50DAE2B34B0EA00D5C43B /* MeasureViewSizeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A50D932B34B0EA00D5C43B /* MeasureViewSizeModifier.swift */; };
 		F1D41E832B3A5F8900E36952 /* ExpenseListVC+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D41E822B3A5F8800E36952 /* ExpenseListVC+TableViewDelegate.swift */; };
-		F1D41E852B3A5FC900E36952 /* ExpenseListVC+dataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D41E842B3A5FC900E36952 /* ExpenseListVC+dataDelegate.swift */; };
+		F1D41E852B3A5FC900E36952 /* ExpenseListVC+DataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D41E842B3A5FC900E36952 /* ExpenseListVC+DataDelegate.swift */; };
 		F1D41E872B3A680700E36952 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D41E862B3A680700E36952 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A108240A2B5122F000C8C4C1 /* AddRecordVC+collectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddRecordVC+collectionViewDelegate.swift"; sourceTree = "<group>"; };
+		A142AD292B4408C50037FACB /* ExpenseListVC+FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpenseListVC+FilterView.swift"; sourceTree = "<group>"; };
+		A142ADA42B4A6E0F0037FACB /* FilterCollectionViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCollectionViewHeader.xib; sourceTree = "<group>"; };
+		A142ADA52B4A6E0F0037FACB /* FilterCollectionViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewHeader.swift; sourceTree = "<group>"; };
+		A142ADA62B4A6E0F0037FACB /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		A142ADA72B4A6E0F0037FACB /* FilterCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCollectionViewCell.xib; sourceTree = "<group>"; };
+		A142ADAC2B4A6E890037FACB /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
 		A14430B52B294E7000589270 /* iActivityIndicatorStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iActivityIndicatorStyle.swift; sourceTree = "<group>"; };
 		A14430B62B294E7000589270 /* RowOfShapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowOfShapes.swift; sourceTree = "<group>"; };
 		A14430B72B294E7000589270 /* StyleModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleModifier.swift; sourceTree = "<group>"; };
@@ -194,7 +208,7 @@
 		F1A50D922B34B0EA00D5C43B /* DYGridChartHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYGridChartHeaderView.swift; sourceTree = "<group>"; };
 		F1A50D932B34B0EA00D5C43B /* MeasureViewSizeModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureViewSizeModifier.swift; sourceTree = "<group>"; };
 		F1D41E822B3A5F8800E36952 /* ExpenseListVC+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpenseListVC+TableViewDelegate.swift"; sourceTree = "<group>"; };
-		F1D41E842B3A5FC900E36952 /* ExpenseListVC+dataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpenseListVC+dataDelegate.swift"; sourceTree = "<group>"; };
+		F1D41E842B3A5FC900E36952 /* ExpenseListVC+DataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpenseListVC+DataDelegate.swift"; sourceTree = "<group>"; };
 		F1D41E862B3A680700E36952 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,6 +254,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A142ADA32B4A6E0F0037FACB /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A142ADA42B4A6E0F0037FACB /* FilterCollectionViewHeader.xib */,
+				A142ADA52B4A6E0F0037FACB /* FilterCollectionViewHeader.swift */,
+				A142ADA62B4A6E0F0037FACB /* FilterCollectionViewCell.swift */,
+				A142ADA72B4A6E0F0037FACB /* FilterCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		A14430822B2935AF00589270 /* UIKitWrapperClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,12 +393,15 @@
 		A166B91D2B27E38B001D1CC6 /* Expense */ = {
 			isa = PBXGroup;
 			children = (
+				A142ADA32B4A6E0F0037FACB /* CollectionViewCell */,
 				A166B91E2B27E38B001D1CC6 /* Constants.swift */,
 				A166B91F2B27E38B001D1CC6 /* RecordVC.swift */,
 				A1EAC1EB2B28915100F7DC2F /* Expense.storyboard */,
 				A166B9202B27E38B001D1CC6 /* ExpenseListVC.swift */,
 				F1D41E822B3A5F8800E36952 /* ExpenseListVC+TableViewDelegate.swift */,
-				F1D41E842B3A5FC900E36952 /* ExpenseListVC+dataDelegate.swift */,
+				A142ADAC2B4A6E890037FACB /* FilterVC.swift */,
+				F1D41E842B3A5FC900E36952 /* ExpenseListVC+DataDelegate.swift */,
+				A142AD292B4408C50037FACB /* ExpenseListVC+FilterView.swift */,
 				F1A50D702B34AEEA00D5C43B /* ExpensesViewModel.swift */,
 				A1A68C032B29AB3C00C9EE2C /* ExpenseListVC+SalaryPopup.swift */,
 				A166B9212B27E38B001D1CC6 /* ExpenseCell.xib */,
@@ -381,6 +409,7 @@
 				A166B9232B27E38B001D1CC6 /* RecordModel.swift */,
 				A1A68C0F2B29C75100C9EE2C /* SalayModel.swift */,
 				A166B9242B27E38B001D1CC6 /* AddRecordVC.swift */,
+				A108240A2B5122F000C8C4C1 /* AddRecordVC+collectionViewDelegate.swift */,
 				F15A61652B3F314400D4FDE0 /* AddRecordVC+autoAdd.swift */,
 			);
 			path = Expense;
@@ -607,10 +636,12 @@
 			files = (
 				F15A61602B3EC64500D4FDE0 /* Launch Screen.storyboard in Resources */,
 				A146B6CE2B271AF600A3650E /* Preview Assets.xcassets in Resources */,
+				A142ADAB2B4A6E0F0037FACB /* FilterCollectionViewCell.xib in Resources */,
 				A1EAC1EC2B28915100F7DC2F /* Expense.storyboard in Resources */,
 				A166B93A2B27E3F3001D1CC6 /* GoogleService-Info.plist in Resources */,
 				A166B9282B27E38B001D1CC6 /* ExpenseCell.xib in Resources */,
 				A146B6CB2B271AF600A3650E /* Assets.xcassets in Resources */,
+				A142ADA82B4A6E0F0037FACB /* FilterCollectionViewHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +669,7 @@
 				A1A68C0C2B29BBCA00C9EE2C /* DataHelper+Hex.swift in Sources */,
 				A166B92A2B27E38B001D1CC6 /* RecordModel.swift in Sources */,
 				F1A50D992B34B0EA00D5C43B /* DYPieFraction.swift in Sources */,
+				A108240B2B5122F000C8C4C1 /* AddRecordVC+collectionViewDelegate.swift in Sources */,
 				A166B9292B27E38B001D1CC6 /* ExpenseCell.swift in Sources */,
 				F1A50DA42B34B0EA00D5C43B /* OrientationObserver.swift in Sources */,
 				F1A50D9B2B34B0EA00D5C43B /* DYBarDataSet.swift in Sources */,
@@ -646,14 +678,16 @@
 				F1A50D712B34AEEA00D5C43B /* ExpensesViewModel.swift in Sources */,
 				F1A50DA62B34B0EA00D5C43B /* DYFractionChartInfoView.swift in Sources */,
 				A1A68C0A2B29BB3400C9EE2C /* DataHelper.swift in Sources */,
+				A142ADAD2B4A6E890037FACB /* FilterVC.swift in Sources */,
 				A1EAC1EE2B28949000F7DC2F /* AppDelegate.swift in Sources */,
 				F1A50D9A2B34B0EA00D5C43B /* MarkerLine.swift in Sources */,
 				A1A68C102B29C75100C9EE2C /* SalayModel.swift in Sources */,
 				A1A68C042B29AB3C00C9EE2C /* ExpenseListVC+SalaryPopup.swift in Sources */,
 				F1A50D952B34B0EA00D5C43B /* DYPieChartSettings.swift in Sources */,
 				A1A68C062B29B67C00C9EE2C /* Constant.swift in Sources */,
-				F1D41E852B3A5FC900E36952 /* ExpenseListVC+dataDelegate.swift in Sources */,
+				F1D41E852B3A5FC900E36952 /* ExpenseListVC+DataDelegate.swift in Sources */,
 				F1D41E832B3A5F8900E36952 /* ExpenseListVC+TableViewDelegate.swift in Sources */,
+				A142ADA92B4A6E0F0037FACB /* FilterCollectionViewHeader.swift in Sources */,
 				F1A50DA32B34B0EA00D5C43B /* DYDataPoint.swift in Sources */,
 				F1A50DAE2B34B0EA00D5C43B /* MeasureViewSizeModifier.swift in Sources */,
 				A14430BA2B294E7100589270 /* iActivityIndicatorStyle.swift in Sources */,
@@ -668,6 +702,7 @@
 				F1A50DAC2B34B0EA00D5C43B /* MaxSizeOptionalView.swift in Sources */,
 				F1D41E872B3A680700E36952 /* HomeViewModel.swift in Sources */,
 				F1A50D962B34B0EA00D5C43B /* DYPlotAreaSettings.swift in Sources */,
+				A142ADAA2B4A6E0F0037FACB /* FilterCollectionViewCell.swift in Sources */,
 				A14430C02B29564B00589270 /* Loadder.swift in Sources */,
 				A1EAC1EA2B288E4700F7DC2F /* SpeechRecognizer.swift in Sources */,
 				F1A50D9C2B34B0EA00D5C43B /* String+Extensions.swift in Sources */,
@@ -682,6 +717,7 @@
 				F1A50DA92B34B0EA00D5C43B /* PlotAreaChart.swift in Sources */,
 				F1A50D972B34B0EA00D5C43B /* Shadow.swift in Sources */,
 				F1A50D9D2B34B0EA00D5C43B /* Path+QuadCurve.swift in Sources */,
+				A142AD2A2B4408C50037FACB /* ExpenseListVC+FilterView.swift in Sources */,
 				A14430BB2B294E7100589270 /* RowOfShapes.swift in Sources */,
 				A1A68C082B29BAF700C9EE2C /* FireBaseManager+Expenses.swift in Sources */,
 				F1A50DA72B34B0EA00D5C43B /* DYPieChartView.swift in Sources */,
