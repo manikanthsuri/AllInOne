@@ -64,23 +64,28 @@ extension ExpenseListVC: UITableViewDataSource, UITableViewDelegate {
         }
         deleteAction.image = UIImage(systemName: "trash.circle.fill")
         
-        let archiveAction = UIContextualAction(style: .normal, title: "edit") { (_, _, completionHandler) in
+        let editAction = UIContextualAction(style: .normal, title: "edit") { (_, _, completionHandler) in
            
             self.editRecord(record: record)
             completionHandler(true)
         }
-        archiveAction.backgroundColor = .blue
-        archiveAction.image = UIImage(systemName: "pencil.circle.fill")
+        editAction.backgroundColor = .blue
+        editAction.image = UIImage(systemName: "pencil.circle.fill")
         
     
-        if record.sent == false {
+        if !record.sent || (allowSentItemEdit && allowSentItemDelete) {
             
-            return UISwipeActionsConfiguration(actions: [deleteAction, archiveAction])
+            return UISwipeActionsConfiguration(actions: [deleteAction, editAction])
             
-        } else {
-            
-            return UISwipeActionsConfiguration(actions: [])
+        } else if record.sent {
+           
+            if allowSentItemEdit {
+                return UISwipeActionsConfiguration(actions: [editAction])
+            } else if  allowSentItemDelete {
+                return UISwipeActionsConfiguration(actions: [deleteAction])
+            }
         }
+        return UISwipeActionsConfiguration(actions: [])
     }
     
     func editRecord(record: RecordModel) {

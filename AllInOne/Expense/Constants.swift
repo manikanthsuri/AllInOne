@@ -23,6 +23,8 @@ var toAccounts = ["BAJAJ FINSERV", "DMART", "FATHER", "FUEL", "HDFC BANK", "HDFC
 var bankAccounts = ["HDFC BANK","ICICI BANK","SBI","UNION BANK"]
 var filterSections = ["From Account", "To Account", "Transaction Status", "Date", "Month", "Year"]
 var showAutoAdd = false
+var allowSentItemDelete = false
+var allowSentItemEdit = false
 var sampleRecords = [[String:Any]]()
 let colorMapper: [String: Color] = [
     
