@@ -67,8 +67,9 @@ extension ExpenseListVC: dataDelegate {
                     return record1.createdOn ?? "" < record2.createdOn ?? ""
                 }
                 expenses = sortedRecords
+                filteredExpenses = expenses
                 
-                let filteredRecords = self.expenses.filter { record in
+                let filteredRecords = self.filteredExpenses.filter { record in
                     if bankAccounts.contains(record.toAccount){
                         return true
                     }

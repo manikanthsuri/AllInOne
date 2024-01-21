@@ -6,7 +6,8 @@
 //
 import Foundation
 
-public struct RecordModel: Equatable, Codable, Hashable{
+@objcMembers
+public class RecordModel: NSObject, Codable{
 
     public var amount: Decimal
     public var fromAccount: String

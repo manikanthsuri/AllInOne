@@ -32,6 +32,7 @@
 		A146B6E82B271D6100A3650E /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146B6E62B271D6100A3650E /* SideMenuView.swift */; };
 		A146B6E92B271D6100A3650E /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146B6E72B271D6100A3650E /* SideMenu.swift */; };
 		A146B6EB2B2728D400A3650E /* ExpenseListVCWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146B6EA2B2728D300A3650E /* ExpenseListVCWrapper.swift */; };
+		A161D3592B5CE06500399A01 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A161D3582B5CE06500399A01 /* Enum.swift */; };
 		A166B9142B27E343001D1CC6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A166B9132B27E343001D1CC6 /* FirebaseAnalytics */; };
 		A166B9162B27E343001D1CC6 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = A166B9152B27E343001D1CC6 /* FirebaseAnalyticsOnDeviceConversion */; };
 		A166B9182B27E343001D1CC6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A166B9172B27E343001D1CC6 /* FirebaseAnalyticsSwift */; };
@@ -151,6 +152,7 @@
 		A146B6E62B271D6100A3650E /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		A146B6E72B271D6100A3650E /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		A146B6EA2B2728D300A3650E /* ExpenseListVCWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListVCWrapper.swift; sourceTree = "<group>"; };
+		A161D3582B5CE06500399A01 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		A166B91E2B27E38B001D1CC6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A166B91F2B27E38B001D1CC6 /* RecordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordVC.swift; sourceTree = "<group>"; };
 		A166B9202B27E38B001D1CC6 /* ExpenseListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseListVC.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 		A14430832B2935ED00589270 /* Dairy */ = {
 			isa = PBXGroup;
 			children = (
+				A146B6DE2B271D5900A3650E /* DairyView.swift */,
 				A1EAC1E92B288E4700F7DC2F /* SpeechRecognizer.swift */,
 			);
 			path = Dairy;
@@ -286,8 +289,7 @@
 			children = (
 				F18EAB702B2DB5D40017E83E /* ReminderView.swift */,
 			);
-			name = RemindMe;
-			path = ../RemindMe;
+			path = RemindMe;
 			sourceTree = "<group>";
 		};
 		A14430852B29360200589270 /* TimeDiff */ = {
@@ -295,8 +297,7 @@
 			children = (
 				A146B6DD2B271D5900A3650E /* TimeDiff.swift */,
 			);
-			name = TimeDiff;
-			path = ../TimeDiff;
+			path = TimeDiff;
 			sourceTree = "<group>";
 		};
 		A14430862B29360200589270 /* AgeCaluculator */ = {
@@ -304,8 +305,7 @@
 			children = (
 				F18EAB712B2DB5D50017E83E /* AgeDiff.swift */,
 			);
-			name = AgeCaluculator;
-			path = ../AgeCaluculator;
+			path = AgeCaluculator;
 			sourceTree = "<group>";
 		};
 		A14430B42B294E7000589270 /* ActivityIndicator */ = {
@@ -341,19 +341,13 @@
 		A146B6C52B271AF400A3650E /* AllInOne */ = {
 			isa = PBXGroup;
 			children = (
-				F1A50D722B34B0EA00D5C43B /* SwiftUIGraphs */,
 				A1EAC1ED2B28949000F7DC2F /* AppDelegate.swift */,
 				A146B6C62B271AF400A3650E /* AllInOne_SwiftUIApp.swift */,
-				F18EAB6E2B2D85A20017E83E /* Protocols.swift */,
 				F15A615F2B3EC64500D4FDE0 /* Launch Screen.storyboard */,
 				A146B6CA2B271AF600A3650E /* Assets.xcassets */,
-				A14430832B2935ED00589270 /* Dairy */,
-				A14430822B2935AF00589270 /* UIKitWrapperClasses */,
-				A166B9372B27E3F3001D1CC6 /* FireBase */,
-				A166B92E2B27E3E0001D1CC6 /* UIHelper */,
-				A166B91D2B27E38B001D1CC6 /* Expense */,
-				A146B6DC2B271D5900A3650E /* ManuItems */,
-				A146B6E52B271D6100A3650E /* SideMenu */,
+				A161D3572B5CE02D00399A01 /* Helper */,
+				A161D3562B5CDFF300399A01 /* Features */,
+				A161D3552B5C0F2900399A01 /* Protocols */,
 				A146B6CC2B271AF600A3650E /* Preview Content */,
 			);
 			path = AllInOne;
@@ -370,11 +364,7 @@
 		A146B6DC2B271D5900A3650E /* ManuItems */ = {
 			isa = PBXGroup;
 			children = (
-				A14430842B29360200589270 /* RemindMe */,
-				A14430852B29360200589270 /* TimeDiff */,
 				F18EAB742B2DB6560017E83E /* Home */,
-				A14430862B29360200589270 /* AgeCaluculator */,
-				A146B6DE2B271D5900A3650E /* DairyView.swift */,
 				F18EAB752B2DB6D10017E83E /* Expenses */,
 			);
 			path = ManuItems;
@@ -388,6 +378,40 @@
 				A146B6E72B271D6100A3650E /* SideMenu.swift */,
 			);
 			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		A161D3552B5C0F2900399A01 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F18EAB6E2B2D85A20017E83E /* Protocols.swift */,
+				A161D3582B5CE06500399A01 /* Enum.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A161D3562B5CDFF300399A01 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A14430842B29360200589270 /* RemindMe */,
+				A14430852B29360200589270 /* TimeDiff */,
+				A14430862B29360200589270 /* AgeCaluculator */,
+				A146B6DC2B271D5900A3650E /* ManuItems */,
+				A14430832B2935ED00589270 /* Dairy */,
+				A146B6E52B271D6100A3650E /* SideMenu */,
+				A166B91D2B27E38B001D1CC6 /* Expense */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A161D3572B5CE02D00399A01 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A14430822B2935AF00589270 /* UIKitWrapperClasses */,
+				A166B9372B27E3F3001D1CC6 /* FireBase */,
+				A166B92E2B27E3E0001D1CC6 /* UIHelper */,
+				F1A50D722B34B0EA00D5C43B /* SwiftUIGraphs */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		A166B91D2B27E38B001D1CC6 /* Expense */ = {
@@ -656,6 +680,7 @@
 				A146B6E12B271D5900A3650E /* TimeDiff.swift in Sources */,
 				A146B6EB2B2728D400A3650E /* ExpenseListVCWrapper.swift in Sources */,
 				F1A50DA12B34B0EA00D5C43B /* GeometryEffect+Extensions.swift in Sources */,
+				A161D3592B5CE06500399A01 /* Enum.swift in Sources */,
 				A146B6E82B271D6100A3650E /* SideMenuView.swift in Sources */,
 				F18EAB732B2DB5D50017E83E /* AgeDiff.swift in Sources */,
 				A166B9272B27E38B001D1CC6 /* ExpenseListVC.swift in Sources */,

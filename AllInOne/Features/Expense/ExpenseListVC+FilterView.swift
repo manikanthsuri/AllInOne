@@ -11,10 +11,18 @@ import UIKit
 extension ExpenseListVC : filterProtocol {
         
     @IBAction func filterBtnAction(_ sender: UIButton) {
-        if let filterVC = storyboard!.instantiateViewController(withIdentifier: "FilterVC") as? FilterVC {
-            filterVC.filterDelegate = self
-            self.present(filterVC, animated: true, completion: nil)
+
+        if !sender.isSelected {
+            if let filterVC = storyboard!.instantiateViewController(withIdentifier: "FilterVC") as? FilterVC {
+                filterVC.filterDelegate = self
+                self.present(filterVC, animated: true, completion: nil)
+            }
+        } else {
+            sender.isSelected = false
+            filteredExpenses = expenses
+            expenseListTblView.reloadData()
         }
+        
     }
     
     func filter(with filterDict: [String : [String]]) {
@@ -48,8 +56,17 @@ extension ExpenseListVC : filterProtocol {
                 predicateArray.append(predicate)
             }
         }
-        let finalPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicateArray)
-        let filteredArray = expenses.filter { finalPredicate.evaluate(with: $0) }
+        if predicateArray.count > 0 {
+            let finalPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicateArray)
+            let filteredArray = expenses.filter { finalPredicate.evaluate(with: $0) }
+            if filteredArray.count > 0{
+                self.filterBtn.isSelected = true
+                filteredExpenses = filteredArray
+            } else {
+                filteredExpenses = expenses
+            }
+            expenseListTblView.reloadData()
+        }
     }
 }
     

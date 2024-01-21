@@ -11,7 +11,7 @@ import UIKit
 extension ExpenseListVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.expenses.count
+        return self.filteredExpenses.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -20,7 +20,7 @@ extension ExpenseListVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ExpenseCell", for: indexPath) as! ExpenseCell
-        let record = self.expenses[indexPath.row]
+        let record = self.filteredExpenses[indexPath.row]
         cell.amountLbl.text = "\(record.amount)"
         cell.fromlbl.text = "From : \(record.fromAccount)"
         cell.toLbl.text = "To : \(record.toAccount)"
@@ -48,13 +48,13 @@ extension ExpenseListVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let record = self.expenses[indexPath.row]
+        let record = self.filteredExpenses[indexPath.row]
         
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (_, _, completionHandler) in
             FireBaseManager.shared.deleteExpenseRecord(record: record) { result in
                 switch result {
                 case .success(_):
-                    self.expenses.remove(elementsToRemove: [record])
+                    self.filteredExpenses.remove(elementsToRemove: [record])
                     self.expenseListTblView.reloadData()
                 case .failure(let error):
                     print("Failure: \(error)")

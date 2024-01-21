@@ -7,10 +7,6 @@
 
 import UIKit
 
-public enum ActionSheetPopoverStyle: Int {
-    case normal = 0
-    case barButton
-}
 
 public struct Parameters {
     var title: String?

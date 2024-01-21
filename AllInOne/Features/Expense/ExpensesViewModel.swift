@@ -5,15 +5,6 @@
 //  Created by Suri Mani kanth on 21/12/23.
 //
 
-enum fetchDataType {
-    case salary
-    case expenses
-}
-
-protocol dataDelegate: AnyObject {
-    func dataDidUpdate(newData: [Any], ofType type: fetchDataType, error: Error?)
-}
-
 import Foundation
 
 

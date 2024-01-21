@@ -15,3 +15,8 @@ import Foundation
 @objc protocol filterProtocol {
     func filter(with filterDict:[String: [String]])
 }
+
+protocol dataDelegate: AnyObject {
+    func dataDidUpdate(newData: [Any], ofType type: fetchDataType, error: Error?)
+}
+

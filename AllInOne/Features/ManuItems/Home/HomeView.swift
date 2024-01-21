@@ -14,6 +14,7 @@ struct HomeView: View {
     @State private var pieScale:CGSize = .zero
     @Binding var presentSideMenu: Bool
     @State private var isFilterVisible = false
+    @State private var isAddrecordVisible = false
     @State private var dataFromFilterView: String?
     @State private var filterUpdated = false
     var body: some View {
@@ -29,7 +30,7 @@ struct HomeView: View {
                 Spacer()
                 Text(filterUpdated ? "\(viewModel.id ?? "")" : DataHelper.getMonthYearString())
                     .font(.title)
-                    .foregroundColor(Color(hex: 0xAF52DE))
+                    .foregroundColor(.white)
                     .bold()
                 Spacer()
                 Button{
@@ -37,7 +38,7 @@ struct HomeView: View {
                 } label: {
                     Image("filter")
                         .resizable()
-                        .frame(width: 40, height: 40)
+                        .frame(width: 28, height: 28)
                 }
                 .padding()
                 .sheet(isPresented: $isFilterVisible) {
@@ -46,18 +47,44 @@ struct HomeView: View {
                             viewModel.updateDetails(id: data)
                             filterUpdated.toggle()
                         })
-                            .presentationDetents([.height(200)]) // here!
-                    }.frame(width: 400, height: 200)
+                        .presentationDetents([.height(200)]) // here!
+                    }
+                    .frame(width: 400, height: 200)
+                    .background(
+                        LinearGradient(
+                            gradient: Gradient(
+                                colors: [.white,
+                                         .mint.opacity(0.4),
+                                         .white,
+                                         .mint.opacity(0.4),
+                                         .white,
+                                         .mint.opacity(0.4),
+                                         .white,]),
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing)
+                    )
                     
                 }
-                
             }
             .background(.mint)
-            
             GeometryReader { proxy in
                 Group {
                     ZStack(alignment: Alignment.topLeading) {
                         if proxy.size.height > proxy.size.width {
+                            HStack{
+                                Spacer()
+                                Button{
+                                    isAddrecordVisible.toggle()
+                                } label: {
+                                    Image("ic_add_expense")
+                                        .resizable()
+                                        .frame(width: 40, height: 40)
+                                }
+                                .padding()
+                                .sheet(isPresented: $isAddrecordVisible) {
+                                    AddRecordVCWrapper()
+                                }
+                            }
                             VStack {
                                 self.content()
                             }
@@ -99,20 +126,16 @@ struct HomeView: View {
             .padding(10)
             Spacer()
             VStack(alignment: .leading, spacing: 5) {
-                Text(viewModel.salaryText()).font(.headline).bold()
-                Text(viewModel.expensesText()).font(.headline).bold()
-                Text(viewModel.balanceText()).font(.headline).bold()
-                Text(viewModel.paidUnPaidText()).font(.headline).bold()
+                HStack(alignment: .center, spacing: 40) {
+                    Text(viewModel.salaryText()).font(.headline).bold()
+                    Text(viewModel.expensesText()).font(.headline).bold()
+                }
+                HStack(alignment: .center, spacing: 40) {
+                    Text(viewModel.balanceText()).font(.headline).bold()
+                    Text(viewModel.paidUnPaidText()).font(.headline).bold()
+                }
             }
             .padding()
-            .frame(width: 300,height: 120)
-            .background(
-                LinearGradient(
-                    gradient: Gradient(
-                        colors: [Color.pink, Color.white.opacity(0.9)]),
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing)
-            )
             Spacer()
         }.onAppear {
             withAnimation(.spring()) {

@@ -110,23 +110,33 @@ extension HomeViewModel: dataDelegate {
     }
     
     func salaryText() -> String {
-        return "Salary - \(Decimal(salary ?? 0.0))"
+        let salaray = Decimal(salary ?? 0.0)
+        return !salaray.isZero ? "Salary - \(salaray)" : ""
     }
     
     func expensesText() -> String {
-        
-        return "Expenses - \(records.reduce(0, { $0 + $1.amount}))"
+        let expenses = records.reduce(0, { $0 + $1.amount})
+        return !expenses.isZero ? "Expenses - \(expenses)" : ""
     }
     
     func balanceText() -> String {
         let balance = Decimal(self.salary ?? 0.0) - records.reduce(0, { $0 + $1.amount})
-        return "Balance - \(balance)"
+        return !balance.isZero ? "Balance - \(balance)" : ""
     }
     
     func paidUnPaidText() -> String {
         let paidRecords = records.filter{$0.sent == true}.reduce(0, { $0 + $1.amount})
         let unpaidrecords = records.filter{$0.sent == false}.reduce(0, { $0 + $1.amount})
-        return "Paid / Unpaid - \(paidRecords) / \(unpaidrecords)"
+        if !paidRecords.isZero && !unpaidrecords.isZero {
+            return "Paid / Unpaid - \(paidRecords) / \(unpaidrecords)"
+        } else if !paidRecords.isZero {
+            return "Paid - \(paidRecords)"
+        } else if !unpaidrecords.isZero {
+            return "Unpaid - \(unpaidrecords)"
+        } else {
+            return ""
+        }
+        
     }
 }
 extension Array where Element: Equatable {
