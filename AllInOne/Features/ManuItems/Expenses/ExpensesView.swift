@@ -17,21 +17,21 @@ struct ExpensesView: View {
                     presentSideMenu.toggle()
                 }) {
                     Image("menu").resizable()
-                        .frame(width: 32, height: 32)
+                        .frame(width: 36, height: 36)
                         .background(Color(UIColor(hex: "00C7BE")))
                       
                 }
                 Text("Expense List")
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40)
                     .background(Color(UIColor(hex: "00C7BE")))
-                    .foregroundColor(Color(UIColor(hex: "AF52DE")))
+                    .foregroundColor(.white)
                     .font(.system(size: 26, weight: .bold))
                     
                 Button(action: {
                     isSheetPresented.toggle()
                 }) {
                     Image("ic_add_expense").resizable()
-                        .frame(width: 40, height: 40)
+                        .frame(width: 36, height: 36)
                         .background(Color(UIColor(hex: "00C7BE")))
                 }
                 Spacer(minLength: 10)

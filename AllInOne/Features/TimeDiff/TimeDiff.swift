@@ -12,22 +12,23 @@ struct TimeDiff: View {
     @Binding var presentSideMenu: Bool
     
     var body: some View {
-        VStack{
-            HStack{
-                Button{
+        VStack(){
+            HStack(alignment: .top,spacing: 0) {
+                Button(action: {
                     presentSideMenu.toggle()
-                } label: {
-                    Image("menu")
-                        .resizable()
-                        .frame(width: 32, height: 32)
+                }) {
+                    Image("menu").resizable()
+                        .frame(width: 36, height: 36)
+                        .background(Color(UIColor(hex: "00C7BE")))
+                      
                 }
-                Spacer()
-            }.foregroundColor(.pink)
-            
-            Spacer()
-            Text("Time Diff")
-            Spacer()
+                Text("Time Diff")
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 40)
+                    .background(Color(UIColor(hex: "00C7BE")))
+                    .foregroundColor(.white)
+                    .font(.system(size: 26, weight: .bold))
+            }
         }
-        .padding(.horizontal, 24)
+        .background(Color(UIColor(hex: "00C7BE")))
     }
 }

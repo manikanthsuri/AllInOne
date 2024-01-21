@@ -106,6 +106,7 @@
                                             <constraint firstAttribute="height" constant="40" id="L3z-EO-1TL"/>
                                             <constraint firstAttribute="width" constant="40" id="YZS-Go-uAo"/>
                                         </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                         <state key="normal" image="filter"/>
                                         <state key="selected" image="clearFilter"/>

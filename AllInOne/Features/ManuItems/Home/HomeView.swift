@@ -25,7 +25,7 @@ struct HomeView: View {
                 } label: {
                     Image("menu")
                         .resizable()
-                        .frame(width: 32, height: 32)
+                        .frame(width: 36, height: 36)
                 }
                 Spacer()
                 Text(filterUpdated ? "\(viewModel.id ?? "")" : DataHelper.getMonthYearString())
