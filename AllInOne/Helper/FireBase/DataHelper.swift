@@ -21,7 +21,7 @@ final class DataHelper {
     static func getCurrentDateString() -> String {
         let currentDate = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MMM-yyyy HH:mm"
+        dateFormatter.dateFormat = "dd-MMM-yyyy HH:mm a"
         let dateString = dateFormatter.string(from: currentDate)
         return dateString
     }
